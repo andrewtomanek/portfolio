@@ -214,29 +214,35 @@
         z-index: 4;
       }
 
-      .modal {
+      .modal__box {
         display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
+        grid-area: 1/1/1/1;
+        height: 100%;
+        width: 100%;/* Stay in place */
         z-index: 8888; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
         overflow: auto; /* Enable scroll if needed */
         background-color: rgb(0, 0, 0); /* Fallback color */
         background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
       }
 
-      /* Modal Content/Box */
-      .modal-content {
+      .modal__content {
         background-color: #fefefe;
-        margin: 10vh auto; /* 15% from the top and centered */
-        padding: 20px;
+        margin: 0; /* 15% from the top and centered */
+        padding: 0;
         border: 1px solid #888;
-        width: 90%; /* Could be more or less, depending on screen size */
       }
+
+      .detail__box {
+        width: 80vw;
+        height: 80vh;
+        display: grid;
+        grid-auto-flow: row;
+        align-items: center;
+        justify-content: center;
+      }
+
       @media (min-width: 1366px) {
-        .modal-content {
+        .modal__content {
           background-color: #fefefe;
           margin: 10vh auto; /* 15% from the top and centered */
           padding: 20px;
@@ -246,15 +252,15 @@
       }
 
       /* The Close Button */
-      .close {
+      .close__button {
         color: #aaa;
         float: right;
         font-size: 28px;
         font-weight: bold;
       }
 
-      .close:hover,
-      .close:focus {
+      .close__button:hover,
+      .close__button:focus {
         color: black;
         text-decoration: none;
         cursor: pointer;
@@ -333,7 +339,7 @@
                   href="https://github.com/andrewtomanek/morava_winerys"
                   >Github</a
                 >
-                <button class="item__button" data-modal="modalOne">
+                <button class="item__button" data-modal="modal1">
                   Details1
                 </button>
               </div>
@@ -341,7 +347,7 @@
                 <img
                   class="item__img"
                   src="./images/cnt/react-black.png"
-                  data-src="./images/gifs/1.gif"
+                  data-src="./images/gifs/cellar.gif"
                 />
               </div>
             </div>
@@ -349,18 +355,18 @@
           <section class="item__react item__container">
             <div class="item__box">
               <div class="item__controls">
-                <h3 class="item__title">Moravská vinařství</h3>
+                <h3 class="item__title">Zdravá strava</h3>
                 <a
                   class="item__link"
-                  href="https://wonderful-hermann-61e9bd.netlify.com"
+                  href="https://zdrava-strava.netlify.com/"
                   >Demo</a
                 >
                 <a
                   class="item__link"
-                  href="https://github.com/andrewtomanek/morava_winerys"
+                  href="https://github.com/andrewtomanek/zdrava_strava"
                   >Github</a
                 >
-                <button class="item__button" data-modal="modalOne">
+                <button class="item__button" data-modal="modal2">
                   Details1
                 </button>
               </div>
@@ -368,7 +374,7 @@
                 <img
                   class="item__img"
                   src="./images/cnt/react-black.png"
-                  data-src="./images/gifs/1.gif"
+                  data-src="./images/gifs/strava.gif"
                 />
               </div>
             </div>
@@ -376,18 +382,18 @@
           <section class="item__react item__container">
             <div class="item__box">
               <div class="item__controls">
-                <h3 class="item__title">Moravská vinařství</h3>
+                <h3 class="item__title">Internetový obchod</h3>
                 <a
                   class="item__link"
-                  href="https://wonderful-hermann-61e9bd.netlify.com"
+                  href="https://bottle-shop.netlify.com/"
                   >Demo</a
                 >
                 <a
                   class="item__link"
-                  href="https://github.com/andrewtomanek/morava_winerys"
+                  href="https://github.com/andrewtomanek/wine_bottle_shop"
                   >Github</a
                 >
-                <button class="item__button" data-modal="modalOne">
+                <button class="item__button" data-modal="modal3">
                   Details1
                 </button>
               </div>
@@ -395,7 +401,7 @@
                 <img
                   class="item__img"
                   src="./images/cnt/react-black.png"
-                  data-src="./images/gifs/1.gif"
+                  data-src="./images/gifs/bottle.gif"
                 />
               </div>
             </div>
@@ -405,26 +411,26 @@
           <section class="item__node item__container">
             <div class="item__box">
               <div class="item__controls">
-                <h3 class="item__title">Moravská vinařství</h3>
+                <h3 class="item__title">E-shop Node.js</h3>
                 <a
                   class="item__link"
-                  href="https://wonderful-hermann-61e9bd.netlify.com"
+                  href="https://czech-shop.herokuapp.com"
                   >Demo</a
                 >
                 <a
                   class="item__link"
-                  href="https://github.com/andrewtomanek/morava_winerys"
+                  href="https://github.com/andrewtomanek/node-shop"
                   >Github</a
                 >
-                <button class="item__button" data-modal="modalOne">
+                <button class="item__button" data-modal="modal4">
                   Details1
                 </button>
               </div>
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
-                  data-src="./images/gifs/1.gif"
+                  src="./images/cnt/nodejslogo.png"
+                  data-src="./images/gifs/shop.gif"
                 />
               </div>
             </div>
@@ -432,26 +438,26 @@
           <section class="item__web item__container">
             <div class="item__box">
               <div class="item__controls">
-                <h3 class="item__title">Moravská vinařství</h3>
+                <h3 class="item__title">Vinařství Tománkovi</h3>
                 <a
                   class="item__link"
-                  href="https://wonderful-hermann-61e9bd.netlify.com"
+                  href="https://www.vinarstvitomankovi.cz"
                   >Demo</a
                 >
                 <a
                   class="item__link"
-                  href="https://github.com/andrewtomanek/morava_winerys"
+                  href="https://github.com/andrewtomanek/vinarstvi_tomankovi_2019"
                   >Github</a
                 >
-                <button class="item__button" data-modal="modalOne">
+                <button class="item__button" data-modal="modal5">
                   Details1
                 </button>
               </div>
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
-                  data-src="./images/gifs/1.gif"
+                  src="./images/cnt/html5.png"
+                  data-src="./images/gifs/tom.gif"
                 />
               </div>
             </div>
@@ -459,26 +465,26 @@
           <section class="item__node item__container">
             <div class="item__box">
               <div class="item__controls">
-                <h3 class="item__title">Moravská vinařství</h3>
+                <h3 class="item__title">Ghost chat</h3>
                 <a
                   class="item__link"
-                  href="https://wonderful-hermann-61e9bd.netlify.com"
+                  href="https://node-ghost-chat.herokuapp.com"
                   >Demo</a
                 >
                 <a
                   class="item__link"
-                  href="https://github.com/andrewtomanek/morava_winerys"
+                  href="https://github.com/andrewtomanek/ghost-chat"
                   >Github</a
                 >
-                <button class="item__button" data-modal="modalOne">
+                <button class="item__button" data-modal="modal6">
                   Details1
                 </button>
               </div>
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
-                  data-src="./images/gifs/1.gif"
+                  src="./images/cnt/nodejslogo.png"
+                  data-src="./images/gifs/ghost.gif"
                 />
               </div>
             </div>
@@ -488,26 +494,26 @@
           <section class="item__vue item__container">
             <div class="item__box">
               <div class="item__controls">
-                <h3 class="item__title">Moravská vinařství</h3>
+                <h3 class="item__title">Wall Street Game</h3>
                 <a
                   class="item__link"
-                  href="https://wonderful-hermann-61e9bd.netlify.com"
+                  href="https://wall-street-game-bnembk986.now.sh"
                   >Demo</a
                 >
                 <a
                   class="item__link"
-                  href="https://github.com/andrewtomanek/morava_winerys"
+                  href="https://github.com/andrewtomanek/wall-street-game"
                   >Github</a
                 >
-                <button class="item__button" data-modal="modalOne">
+                <button class="item__button" data-modal="modal7">
                   Details1
                 </button>
               </div>
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
-                  data-src="./images/gifs/1.gif"
+                  src="./images/cnt/vue-trans.png"
+                  data-src="./images/gifs/trader.gif"
                 />
               </div>
             </div>
@@ -515,26 +521,26 @@
           <section class="item__vue item__container">
             <div class="item__box">
               <div class="item__controls">
-                <h3 class="item__title">Moravská vinařství</h3>
+                <h3 class="item__title">News client</h3>
                 <a
                   class="item__link"
-                  href="https://wonderful-hermann-61e9bd.netlify.com"
+                  href="https://news-client.andrewtomanek.now.sh/"
                   >Demo</a
                 >
                 <a
                   class="item__link"
-                  href="https://github.com/andrewtomanek/morava_winerys"
+                  href="https://github.com/andrewtomanek/News-client"
                   >Github</a
                 >
-                <button class="item__button" data-modal="modalOne">
+                <button class="item__button" data-modal="modal8">
                   Details1
                 </button>
               </div>
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
-                  data-src="./images/gifs/1.gif"
+                  src="./images/cnt/vue-trans.png"
+                  data-src="./images/gifs/news.gif"
                 />
               </div>
             </div>
@@ -542,47 +548,366 @@
           <section class="item__vue item__container">
             <div class="item__box">
               <div class="item__controls">
-                <h3 class="item__title">Moravská vinařství</h3>
+                <h3 class="item__title">Czech chat</h3>
                 <a
                   class="item__link"
-                  href="https://wonderful-hermann-61e9bd.netlify.com"
+                  href="https://czech-chat-glkbn6a3d.now.sh/"
                   >Demo</a
                 >
                 <a
                   class="item__link"
-                  href="https://github.com/andrewtomanek/morava_winerys"
+                  href="https://github.com/andrewtomanek/Czech-chat"
                   >Github</a
                 >
-                <button class="item__button" data-modal="modalOne">
+                <button class="item__button" data-modal="modal9">
                   Details1
                 </button>
               </div>
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
-                  data-src="./images/gifs/1.gif"
+                  src="./images/cnt/vue-trans.png"
+                  data-src="./images/gifs/chat.gif"
                 />
               </div>
             </div>
           </section>
         </div>
       </div>
-      <p>
-        <button class="button" data-modal="modalOne">Details1</button>
-      </p>
-      <p>
-        <button class="button" data-modal="modalTwo">Details2</button>
-        <button class="button" data-modal="modalThree">
-          Details3
-        </button>
-      </p>
-      <div class="modal" id="modalOne">
-        <div class="modal-content">
-          <div class="contact-form">
-            <a class="close">×</a>
+
+      <div class="modal__box" id="modal1">
+        <div class="modal__content">
+          <div class="contact__form">
+            <a class="close__button">×</a>
             <div class="detail__box">
               <h4 class="detail__title">Moravská vinařství</h4>
+              <div class="detail__pic">
+                <img
+                  class="item__img"
+                  src="./images/cnt/react-black.png"
+                  data-src="./images/gifs/cellar.gif"
+                />
+              </div>
+              <div class="detail__content">
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   <div class="modal__box" id="modal2">
+        <div class="modal__content">
+          <div class="contact__form">
+            <a class="close__button">×</a>
+            <div class="detail__box">
+                <h3 class="item__title">Zdravá strava</h3>
+                <a
+                  class="item__link"
+                  href="https://zdrava-strava.netlify.com/"
+                  >Demo</a
+                >
+                <a
+                  class="item__link"
+                  href="https://github.com/andrewtomanek/zdrava_strava"
+                  >Github</a
+                >
+              <div class="detail__pic">
+                  <img
+                  class="item__img"
+                  src="./images/cnt/react-black.png"
+                  data-src="./images/gifs/strava.gif"
+                />
+              </div>
+              <div class="detail__content">
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   <div class="modal__box" id="modal3">
+        <div class="modal__content">
+          <div class="contact__form">
+            <a class="close__button">×</a>
+            <div class="detail__box">
+                <h3 class="item__title">Internetový obchod</h3>
+                <a
+                  class="item__link"
+                  href="https://bottle-shop.netlify.com/"
+                  >Demo</a
+                >
+                <a
+                  class="item__link"
+                  href="https://github.com/andrewtomanek/wine_bottle_shop"
+                  >Github</a
+                >
+              <div class="detail__pic">
+                  <img
+                  class="item__img"
+                  src="./images/cnt/react-black.png"
+                  data-src="./images/gifs/bottle.gif"
+                />
+              </div>
+              <div class="detail__content">
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   <div class="modal__box" id="modal4">
+        <div class="modal__content">
+          <div class="contact__form">
+            <a class="close__button">×</a>
+            <div class="detail__box">
+                <h3 class="item__title">E-shop Node.js</h3>
+                <a
+                  class="item__link"
+                  href="https://czech-shop.herokuapp.com"
+                  >Demo</a
+                >
+                <a
+                  class="item__link"
+                  href="https://github.com/andrewtomanek/node-shop"
+                  >Github</a
+                >
+              <div class="detail__pic">
+                  <img
+                  class="item__img"
+                  src="./images/cnt/nodejslogo.png"
+                  data-src="./images/gifs/shop.gif"
+                />
+              </div>
+              <div class="detail__content">
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   <div class="modal__box" id="modal5">
+        <div class="modal__content">
+          <div class="contact__form">
+            <a class="close__button">×</a>
+            <div class="detail__box">
+                <h3 class="item__title">Vinařství Tománkovi</h3>
+                <a
+                  class="item__link"
+                  href="https://www.vinarstvitomankovi.cz"
+                  >Demo</a
+                >
+                <a
+                  class="item__link"
+                  href="https://github.com/andrewtomanek/vinarstvi_tomankovi_2019"
+                  >Github</a
+                >
+              <div class="detail__pic">
+                  <img
+                  class="item__img"
+                  src="./images/cnt/html5.png"
+                  data-src="./images/gifs/tom.gif"
+                />
+              </div>
+              <div class="detail__content">
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   <div class="modal__box" id="modal6">
+        <div class="modal__content">
+          <div class="contact__form">
+            <a class="close__button">×</a>
+            <div class="detail__box">
+                <h3 class="item__title">Ghost chat</h3>
+                <a
+                  class="item__link"
+                  href="https://node-ghost-chat.herokuapp.com"
+                  >Demo</a
+                >
+                <a
+                  class="item__link"
+                  href="https://github.com/andrewtomanek/ghost-chat"
+                  >Github</a
+                >
+              <div class="detail__pic">
+                  <img
+                  class="item__img"
+                  src="./images/cnt/nodejslogo.png"
+                  data-src="./images/gifs/ghost.gif"
+                />
+              </div>
+              <div class="detail__content">
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   <div class="modal__box" id="modal7">
+        <div class="modal__content">
+          <div class="contact__form">
+            <a class="close__button">×</a>
+            <div class="detail__box">
+                <h3 class="item__title">Wall Street Game</h3>
+                <a
+                  class="item__link"
+                  href="https://wall-street-game-bnembk986.now.sh"
+                  >Demo</a
+                >
+                <a
+                  class="item__link"
+                  href="https://github.com/andrewtomanek/wall-street-game"
+                  >Github</a
+                >
+              <div class="detail__pic">
+                  <img
+                  class="item__img"
+                  src="./images/cnt/vue-trans.png"
+                  data-src="./images/gifs/trader.gif"
+                />
+              </div>
+              <div class="detail__content">
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   <div class="modal__box" id="modal8">
+        <div class="modal__content">
+          <div class="contact__form">
+            <a class="close__button">×</a>
+            <div class="detail__box">
+                <h3 class="item__title">News client</h3>
+                <a
+                  class="item__link"
+                  href="https://news-client.andrewtomanek.now.sh/"
+                  >Demo</a
+                >
+                <a
+                  class="item__link"
+                  href="https://github.com/andrewtomanek/News-client"
+                  >Github</a
+                >
+              <div class="detail__pic">
+                  <img
+                  class="item__img"
+                  src="./images/cnt/vue-trans.png"
+                  data-src="./images/gifs/news.gif"
+                />
+              </div>
+              <div class="detail__content">
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+                <p class="detail__text">
+                  React JS components, Forms, Events, Keys, Router, plus Redux,
+                  Animations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   <div class="modal__box" id="modal9">
+        <div class="modal__content">
+          <div class="contact__form">
+            <a class="close__button">×</a>
+            <div class="detail__box">
+                <h3 class="item__title">Czech chat</h3>
+                <a
+                  class="item__link"
+                  href="https://czech-chat-glkbn6a3d.now.sh/"
+                  >Demo</a
+                >
+                <a
+                  class="item__link"
+                  href="https://github.com/andrewtomanek/Czech-chat"
+                  >Github</a
+                >
+              <div class="detail__pic">
+                  <img
+                  class="item__img"
+                  src="./images/cnt/vue-trans.png"
+                  data-src="./images/gifs/chat.gif"
+                />
+              </div>
               <div class="detail__content">
                 <p class="detail__text">
                   React JS components, Forms, Events, Keys, Router, plus Redux,
@@ -601,41 +926,7 @@
           </div>
         </div>
       </div>
-      <div class="modal" id="modalTwo">
-        <div class="modal-content">
-          <div class="contact-form">
-            <span class="close">×</span>
-            <div class="detail__box">
-              <h4 class="detail__title">Moravská vinařství</h4>
-              <div class="detail__content">
-                <p class="detail__text">
-                  React JS components, Forms, Events, Keys, Router, plus Redux,
-                  Animations
-                </p>
-                <p class="detail__text">
-                  React JS components, Forms, Events, Keys, Router, plus Redux,
-                  Animations
-                </p>
-                <p class="detail__text">
-                  React JS components, Forms, Events, Keys, Router, plus Redux,
-                  Animations
-                </p>
-              </div>
-            </div>
-            <br />
-          </div>
-        </div>
       </div>
-      <div class="modal" id="modalThree">
-        <div class="modal-content">
-          <div class="contact-form">
-            <span class="close">×</span>
-            <h2>33333333333333333333333333333333333333333333333333333</h2>
-            <br />
-          </div>
-        </div>
-      </div>
-    </div>
     <script>
       const portfolioItems = document.querySelectorAll(".portfolio-grid section");
       const portfolioButtons = Array.from(
@@ -672,16 +963,16 @@
         };
       });
 
-      var closeBtns = [...document.querySelectorAll(".close")];
+      var closeBtns = [...document.querySelectorAll(".close__button")];
       closeBtns.forEach(function(btn) {
         btn.onclick = function() {
-          var modal = btn.closest(".modal");
+          var modal = btn.closest(".modal__box");
           modal.style.display = "none";
         };
       });
 
       window.onclick = function(event) {
-        if (event.target.className === "modal") {
+        if (event.target.className === "modal__box") {
           event.target.style.display = "none";
         }
       };

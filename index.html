@@ -13,6 +13,67 @@
         --web: hsla(13, 77%, 52%, 1);
       }
 
+      body{
+        margin: 0;
+        padding: 0;
+      }
+
+      .site-wrap {
+display: grid;
+grid: 1fr/1fr;
+align-content: center;
+align-items: start;
+justify-content: center;
+height: 100%;
+        width: 100%;
+      }
+      
+          .contact-wrap {
+display: grid;
+align-content: center;
+align-items: start;
+justify-content: center;
+height: 100%;
+        width: 100%;
+      }
+      
+                .contact-box {
+display: grid;
+grid-auto-flow: column;
+align-content: center;
+align-items: start;
+justify-content: center;
+height: 100%;
+        width: 100%;
+      }
+
+      .portfolio-wrap {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 0rem;
+        grid-area: 1/1/1/1;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: stretch;
+        z-index: 2;
+      }
+
+      .modal-wrap {
+        display: grid;
+        margin: 0;
+        grid-auto-flow: row;
+        grid-gap: 0rem;
+        grid-area: 1/1/1/1;
+        height: 100%;
+        width: 100%;
+        grid-auto-flow: row;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+
       .portfolio-filters {
         display: grid;
         margin: 0;
@@ -215,14 +276,17 @@
       }
 
       .modal__box {
-        display: none; /* Hidden by default */
+        display: none;
         grid-area: 1/1/1/1;
         height: 100%;
-        width: 100%;/* Stay in place */
-        z-index: 8888; /* Sit on top */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        width: 100vw;
+        grid-auto-flow: row;
+        align-items: center;
+        justify-content: center;
+        z-index: 88;
+        overflow: auto; 
+        background-color: rgb(0, 0, 0); 
+        background-color: rgba(0, 0, 0, 0.6);
       }
 
       .modal__content {
@@ -233,38 +297,67 @@
       }
 
       .detail__box {
-        width: 80vw;
-        height: 80vh;
         display: grid;
         grid-auto-flow: row;
         align-items: center;
         justify-content: center;
       }
-
-      @media (min-width: 1366px) {
-        .modal__content {
-          background-color: #fefefe;
-          margin: 10vh auto; /* 15% from the top and centered */
-          padding: 20px;
-          border: 1px solid #888;
-          width: 30%; /* Could be more or less, depending on screen size */
-        }
+      
+            .detail__controls{
+        display: grid;
+        grid-gap: 1rem 3rem;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: center;
       }
 
-      /* The Close Button */
       .close__button {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
+  color: white;
+  background-color: var(--web);
+  padding: 0.4rem 0.4rem;
+  border-radius: 2rem;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 
-      .close__button:hover,
-      .close__button:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }
+.close__button:hover {
+  transform: scale(1.1);
+}
+
+    
+.inverted_text {
+  text-align: center;
+  background-color: var(--color-hex-default);
+}
+
+.inverted_color {
+  position: relative;
+  display: inline-block;
+    font-family: georgia;
+  font-size:10vmin;
+    font-weight: 700;
+  color:white;
+  background:linear-gradient(to right,white 50%, black 50%) bottom,
+    linear-gradient(to right, black 50%,white 50%) top;
+  background-repeat: no-repeat;
+  background-size: 100% 2vmin;
+  padding: 15px 0;
+  white-space: nowrap;
+}
+.inverted_color:before {
+		content: attr(data-text);
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		top: 15px;
+		width: 50%;
+		color: black;
+	}      
 
       @media all and (max-width: 1280px) {
 
@@ -314,7 +407,32 @@
     </style>
   </head>
   <body>
-    <section class="portfolio-wrap">
+    <div class="site-wrap">
+      <div class="portfolio-wrap">
+          <div class="inverted_text">
+              <span class="inverted_color" data-text="OndřejTománek">OndřejTománek</span>
+            </div>
+      <div class="contact-wrap">
+      <div class="contact-box">
+          <a
+          class="item__link"
+          href="https://github.com/andrewtomanek"
+          >Github</a
+        >      <a
+          class="item__link"
+          href="mailto:andrewtomanek@gmail.com"
+          >andrewtomanek@gmail.com</a
+        >    <a
+          class="item__link"
+          href="https://docs.google.com/document/d/1xuZoE-WJuamUSPfxWy7h4u8BWWeckr0Xbfr2KbKaGgw/edit?usp=sharing"
+          >Životopis</a
+        >        <a
+          class="item__link"
+          href="https://codepen.io/andrewTomanek/"
+          >codepen.io/andrewTomanek</a
+        >
+      </div>
+      </div>
       <div class="portfolio-filters">
         <button class="button__react" id="item__react item__container">
           react</button
@@ -323,7 +441,7 @@
         ><button class="button__web" id="item__web item__container">HTML</button>
         <button class="button__showAll" id="showAll">Show All</button>
       </div>
-      <section class="portfolio-grid">
+      <div class="portfolio-grid">
         <div class="react-grid">
           <section class="item__react item__container">
             <div class="item__box">
@@ -346,7 +464,7 @@
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
+                  src="./images/cont/react-black.png"
                   data-src="./images/gifs/cellar.gif"
                 />
               </div>
@@ -373,7 +491,7 @@
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
+                  src="./images/cont/react-black.png"
                   data-src="./images/gifs/strava.gif"
                 />
               </div>
@@ -400,7 +518,7 @@
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
+                  src="./images/cont/react-black.png"
                   data-src="./images/gifs/bottle.gif"
                 />
               </div>
@@ -429,7 +547,7 @@
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/nodejslogo.png"
+                  src="./images/cont/nodejslogo.png"
                   data-src="./images/gifs/shop.gif"
                 />
               </div>
@@ -456,7 +574,7 @@
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/html5.png"
+                  src="./images/cont/html5.png"
                   data-src="./images/gifs/tom.gif"
                 />
               </div>
@@ -483,7 +601,7 @@
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/nodejslogo.png"
+                  src="./images/cont/nodejslogo.png"
                   data-src="./images/gifs/ghost.gif"
                 />
               </div>
@@ -512,7 +630,7 @@
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/vue-trans.png"
+                  src="./images/cont/vue-trans.png"
                   data-src="./images/gifs/trader.gif"
                 />
               </div>
@@ -539,7 +657,7 @@
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/vue-trans.png"
+                  src="./images/cont/vue-trans.png"
                   data-src="./images/gifs/news.gif"
                 />
               </div>
@@ -566,7 +684,7 @@
               <div class="item__back">
                 <img
                   class="item__img"
-                  src="./images/cnt/vue-trans.png"
+                  src="./images/cont/vue-trans.png"
                   data-src="./images/gifs/chat.gif"
                 />
               </div>
@@ -574,17 +692,32 @@
           </section>
         </div>
       </div>
+      </div>
 
+
+
+      <div class="modal-wrap">
       <div class="modal__box" id="modal1">
         <div class="modal__content">
           <div class="contact__form">
-            <a class="close__button">×</a>
-            <div class="detail__box">
-              <h4 class="detail__title">Moravská vinařství</h4>
-              <div class="detail__pic">
-                <img
+                        <div class="detail__box">
+                          <h3 class="detail__title">Moravská vinařství</h3>
+            <div class="detail__controls">
+              <a
+              class="item__link"
+              href="https://wonderful-hermann-61e9bd.netlify.com"
+              >Demo</a
+              >
+              <a class="close__button">×</a> 
+              <a
+                class="item__link"
+                href="https://github.com/andrewtomanek/morava_winerys"
+                >Github</a
+              >
+              </div><div class="detail__pic">
+                  <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
+                  src="./images/cont/react-black.png"
                   data-src="./images/gifs/cellar.gif"
                 />
               </div>
@@ -608,23 +741,24 @@
       </div>   <div class="modal__box" id="modal2">
         <div class="modal__content">
           <div class="contact__form">
-            <a class="close__button">×</a>
-            <div class="detail__box">
-                <h3 class="item__title">Zdravá strava</h3>
-                <a
-                  class="item__link"
-                  href="https://zdrava-strava.netlify.com/"
-                  >Demo</a
-                >
+                        <div class="detail__box">
+                          <h3 class="detail__title">Zdravá strava</h3>
+            <div class="detail__controls">
+              <a
+              class="item__link"
+              href="https://zdrava-strava.netlify.com/"
+              >Demo</a
+              >
+              <a class="close__button">×</a> 
                 <a
                   class="item__link"
                   href="https://github.com/andrewtomanek/zdrava_strava"
                   >Github</a
                 >
-              <div class="detail__pic">
+              </div><div class="detail__pic">
                   <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
+                  src="./images/cont/react-black.png"
                   data-src="./images/gifs/strava.gif"
                 />
               </div>
@@ -648,23 +782,23 @@
       </div>   <div class="modal__box" id="modal3">
         <div class="modal__content">
           <div class="contact__form">
-            <a class="close__button">×</a>
-            <div class="detail__box">
-                <h3 class="item__title">Internetový obchod</h3>
-                <a
-                  class="item__link"
-                  href="https://bottle-shop.netlify.com/"
-                  >Demo</a
-                >
+            <h3 class="detail__title">Internetový obchod</h3>
+                        <div class="detail__box">             <div class="detail__controls">
+                          <a
+                          class="item__link"
+                          href="https://bottle-shop.netlify.com/"
+                          >Demo</a
+                          >
+                          <a class="close__button">×</a> 
                 <a
                   class="item__link"
                   href="https://github.com/andrewtomanek/wine_bottle_shop"
                   >Github</a
                 >
-              <div class="detail__pic">
+              </div><div class="detail__pic">
                   <img
                   class="item__img"
-                  src="./images/cnt/react-black.png"
+                  src="./images/cont/react-black.png"
                   data-src="./images/gifs/bottle.gif"
                 />
               </div>
@@ -688,23 +822,23 @@
       </div>   <div class="modal__box" id="modal4">
         <div class="modal__content">
           <div class="contact__form">
-            <a class="close__button">×</a>
-            <div class="detail__box">
-                <h3 class="item__title">E-shop Node.js</h3>
-                <a
-                  class="item__link"
-                  href="https://czech-shop.herokuapp.com"
-                  >Demo</a
-                >
+            <h3 class="detail__title">E-shop Node.js</h3>
+                        <div class="detail__box">             <div class="detail__controls">
+                          <a
+                          class="item__link"
+                          href="https://czech-shop.herokuapp.com"
+                          >Demo</a
+                          >
+                          <a class="close__button">×</a> 
                 <a
                   class="item__link"
                   href="https://github.com/andrewtomanek/node-shop"
                   >Github</a
                 >
-              <div class="detail__pic">
+              </div><div class="detail__pic">
                   <img
                   class="item__img"
-                  src="./images/cnt/nodejslogo.png"
+                  src="./images/cont/nodejslogo.png"
                   data-src="./images/gifs/shop.gif"
                 />
               </div>
@@ -728,23 +862,23 @@
       </div>   <div class="modal__box" id="modal5">
         <div class="modal__content">
           <div class="contact__form">
-            <a class="close__button">×</a>
-            <div class="detail__box">
-                <h3 class="item__title">Vinařství Tománkovi</h3>
-                <a
-                  class="item__link"
-                  href="https://www.vinarstvitomankovi.cz"
-                  >Demo</a
-                >
+            <h3 class="detail__title">Vinařství Tománkovi</h3>
+                        <div class="detail__box">             <div class="detail__controls">
+                          <a
+                          class="item__link"
+                          href="https://www.vinarstvitomankovi.cz"
+                          >Demo</a
+                          >
+                          <a class="close__button">×</a> 
                 <a
                   class="item__link"
                   href="https://github.com/andrewtomanek/vinarstvi_tomankovi_2019"
                   >Github</a
                 >
-              <div class="detail__pic">
+              </div><div class="detail__pic">
                   <img
                   class="item__img"
-                  src="./images/cnt/html5.png"
+                  src="./images/cont/html5.png"
                   data-src="./images/gifs/tom.gif"
                 />
               </div>
@@ -768,23 +902,23 @@
       </div>   <div class="modal__box" id="modal6">
         <div class="modal__content">
           <div class="contact__form">
-            <a class="close__button">×</a>
-            <div class="detail__box">
-                <h3 class="item__title">Ghost chat</h3>
-                <a
-                  class="item__link"
-                  href="https://node-ghost-chat.herokuapp.com"
-                  >Demo</a
-                >
+            <h3 class="detail__title">Ghost chat</h3>
+                        <div class="detail__box">             <div class="detail__controls">
+                          <a
+                          class="item__link"
+                          href="https://node-ghost-chat.herokuapp.com"
+                          >Demo</a
+                          >
+                          <a class="close__button">×</a> 
                 <a
                   class="item__link"
                   href="https://github.com/andrewtomanek/ghost-chat"
                   >Github</a
                 >
-              <div class="detail__pic">
+              </div><div class="detail__pic">
                   <img
                   class="item__img"
-                  src="./images/cnt/nodejslogo.png"
+                  src="./images/cont/nodejslogo.png"
                   data-src="./images/gifs/ghost.gif"
                 />
               </div>
@@ -808,23 +942,23 @@
       </div>   <div class="modal__box" id="modal7">
         <div class="modal__content">
           <div class="contact__form">
-            <a class="close__button">×</a>
-            <div class="detail__box">
-                <h3 class="item__title">Wall Street Game</h3>
-                <a
-                  class="item__link"
-                  href="https://wall-street-game-bnembk986.now.sh"
-                  >Demo</a
-                >
+            <h3 class="detail__title">Wall Street Game</h3>
+                        <div class="detail__box">             <div class="detail__controls">
+                          <a
+                          class="item__link"
+                          href="https://wall-street-game-bnembk986.now.sh"
+                          >Demo</a
+                          >
+                          <a class="close__button">×</a> 
                 <a
                   class="item__link"
                   href="https://github.com/andrewtomanek/wall-street-game"
                   >Github</a
                 >
-              <div class="detail__pic">
+              </div><div class="detail__pic">
                   <img
                   class="item__img"
-                  src="./images/cnt/vue-trans.png"
+                  src="./images/cont/vue-trans.png"
                   data-src="./images/gifs/trader.gif"
                 />
               </div>
@@ -848,23 +982,23 @@
       </div>   <div class="modal__box" id="modal8">
         <div class="modal__content">
           <div class="contact__form">
-            <a class="close__button">×</a>
-            <div class="detail__box">
-                <h3 class="item__title">News client</h3>
-                <a
-                  class="item__link"
-                  href="https://news-client.andrewtomanek.now.sh/"
-                  >Demo</a
-                >
+            <h3 class="detail__title">News client</h3>
+                        <div class="detail__box">             <div class="detail__controls">
+                          <a
+                          class="item__link"
+                          href="https://news-client.andrewtomanek.now.sh/"
+                          >Demo</a
+                          >
+                          <a class="close__button">×</a> 
                 <a
                   class="item__link"
                   href="https://github.com/andrewtomanek/News-client"
                   >Github</a
                 >
-              <div class="detail__pic">
+              </div><div class="detail__pic">
                   <img
                   class="item__img"
-                  src="./images/cnt/vue-trans.png"
+                  src="./images/cont/vue-trans.png"
                   data-src="./images/gifs/news.gif"
                 />
               </div>
@@ -888,23 +1022,24 @@
       </div>   <div class="modal__box" id="modal9">
         <div class="modal__content">
           <div class="contact__form">
-            <a class="close__button">×</a>
-            <div class="detail__box">
-                <h3 class="item__title">Czech chat</h3>
-                <a
-                  class="item__link"
-                  href="https://czech-chat-glkbn6a3d.now.sh/"
-                  >Demo</a
-                >
+            <h3 class="detail__title">Czech chat</h3>
+                        <div class="detail__box">             <div class="detail__controls">
+                          <a
+                          class="item__link"
+                          href="https://czech-chat-glkbn6a3d.now.sh/"
+                          >Demo</a
+                          >
+                          <a class="close__button">×</a> 
                 <a
                   class="item__link"
                   href="https://github.com/andrewtomanek/Czech-chat"
                   >Github</a
                 >
+                </div>
               <div class="detail__pic">
                   <img
                   class="item__img"
-                  src="./images/cnt/vue-trans.png"
+                  src="./images/cont/vue-trans.png"
                   data-src="./images/gifs/chat.gif"
                 />
               </div>
@@ -922,11 +1057,13 @@
                   Animations
                 </p>
               </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       </div>
+
     <script>
       const portfolioItems = document.querySelectorAll(".portfolio-grid section");
       const portfolioButtons = Array.from(
@@ -940,8 +1077,6 @@
         const clickedButton = e.target.id;
 
         for (const cur of portfolioItems) {
-          console.log(cur.className === clickedButton);
-          console.log(cur.className === clickedButton + " item__hidden");
           if (
             cur.className === clickedButton ||
             cur.className === clickedButton + " item__hidden"
@@ -959,7 +1094,8 @@
       modalBtns.forEach(function(btn) {
         btn.onclick = function() {
           var modal = btn.getAttribute("data-modal");
-          document.getElementById(modal).style.display = "block";
+          document.getElementById(modal).style.display = "grid";
+          document.querySelector(".modal-wrap").style.zIndex = "8";
         };
       });
 
@@ -968,12 +1104,14 @@
         btn.onclick = function() {
           var modal = btn.closest(".modal__box");
           modal.style.display = "none";
+          document.querySelector(".modal-wrap").style.zIndex = "1";
         };
       });
 
       window.onclick = function(event) {
         if (event.target.className === "modal__box") {
           event.target.style.display = "none";
+          document.querySelector(".modal-wrap").style.zIndex = "1";
         }
       };
 

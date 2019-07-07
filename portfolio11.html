@@ -41,7 +41,6 @@
         align-content: center;
         align-items: start;
         justify-content: center;
-        grid-gap: 1rem;
         height: 100%;
         width: 100%;
       }
@@ -50,7 +49,7 @@
         background-color: var(--web);
         display: grid;
         grid-auto-flow: row;
-        grid-gap: 0.5rem;
+        grid-gap: 1rem;
         grid-area: 1/1/1/1;
         height: 100%;
         width: 100%;
@@ -84,7 +83,17 @@
         margin: 0;
       }
 
-       .portfolio-grid {
+      .portfolio-filters button {
+        margin: 0;
+        padding: 0.1rem 0.2rem;
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .portfolio-grid {
         display: grid;
         margin: 0;
         grid-auto-flow: row;
@@ -119,44 +128,7 @@
         align-items: center;
         background-color: var(--node);
       }
-
-      .header__link {
-        background-color: var(--node);
-        color: white;
-        border: solid 0.2rem white;
-        font-size: 1.1rem;
-        font-weight: 900;
-        padding: 0.2rem 0.3rem;
-        text-decoration: none;
-        text-align: center;
-        cursor: pointer;
-        transition: all 300ms;
-      }
-
-      .header__link:hover {       
-        color: white;
-        border: solid 0.2rem black;
-          }
-
-      .portfolio-filters button {
-        margin: 0;
-        padding: 0.2rem 0.3rem;
-        text-decoration: none;
-        text-align: center;
-        color: white;
-        border: solid 0.2rem white;
-        font-weight: 900;
-        font-size: 1.1rem;
-        cursor: pointer;
-        width: 100%;
-        transition: all 300ms;
-      }      
-      
-      .portfolio-filters button:hover {       
-        color: white;
-        border: solid 0.2rem black;
-          }
-   
+      /* Buttons */
       .button__react {
         background-color: var(--react);
       }
@@ -234,7 +206,7 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-        transition: all 300ms;
+        transition: all 800ms;
         transform: scale(0.9);
       }
 
@@ -267,38 +239,24 @@
       .item__link {
         color: white;
         background-color: var(--green);
-        border: solid 0.2rem white;
         font-size: 1rem;
         font-weight: 700;
         padding: 0.2rem;
         margin: 0.2rem;
         text-decoration: none;
         cursor: pointer;
-        transition: all 300ms;
       }
-
-      .item__link:hover {       
-        color: white;
-        border: solid 0.2rem black;
-          }
 
       .item__button {
         color: white;
         background-color: var(--green);
-        border: solid 0.2rem white;
         font-size: 1rem;
         font-weight: 700;
         padding: 0.2rem;
         margin: 0.2rem;
         text-decoration: none;
         cursor: pointer;
-        transition: all 300ms;
       }
-
-      .item__button:hover {       
-        color: white;
-        border: solid 0.2rem black;
-          }
 
       .item__back {
         grid-area: 1/1/1/1;
@@ -342,15 +300,6 @@
         justify-content: center;
       }
 
-      
-      .detail__title {
-        color: var(--web);
-        padding: 0.2rem;
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: 800;
-      }
-
       .detail__controls {
         display: grid;
         grid-gap: 1rem 3rem;
@@ -359,41 +308,12 @@
         justify-content: center;
       }
 
-      .detail__link {
-        color: white;
-        background-color: var(--green);
-        font-size: 1rem;
-        font-weight: 700;
-        padding: 0.2rem;
-        margin: 0.2rem;
-        text-decoration: none;
-        cursor: pointer;
-      }
-
-      .detail__link { 
-               background-color: var(--node);
-        color: white;
-        border: solid 0.2rem white;
-        font-size: 1.1rem;
-        font-weight: 900;
-        padding: 0.2rem 0.3rem;
-        text-decoration: none;
-        text-align: center;
-        cursor: pointer;
-        transition: all 300ms;
-      }
-
-      .detail__link:hover {       
-        color: white;
-        border: solid 0.2rem black;
-          }
-
       .close__button {
         color: white;
         background-color: var(--web);
-        padding: 0.2rem 0.55rem;
+        padding: 0.4rem 0.4rem;
         border-radius: 2rem;
-        font-size: 1.2rem;
+        font-size: 2rem;
         font-weight: 900;
         text-align: center;
         border: none;
@@ -408,7 +328,7 @@
 
       .inverted_text {
         text-align: center;
-        background-color: var(--react);
+        background-color: var(--vue);
         padding: 1rem;
       }
 
@@ -418,9 +338,9 @@
         font-family: georgia;
         font-size: 3rem;
         font-weight: 900;
-        color: var(--node);
-        background: linear-gradient(to right, var(--node) 43%, var(--web) 43%) bottom,
-          linear-gradient(to right, var(--web) 43%, var(--node) 43%) top;
+        color: white;
+        background: linear-gradient(to right, white 43%, var(--web) 43%) bottom,
+          linear-gradient(to right, var(--web) 43%, white 43%) top;
         background-repeat: no-repeat;
         background-size: 100% 2vmin;
         padding: 1rem 0;
@@ -445,33 +365,12 @@
       }
 
       @media all and (max-width: 480px) {
-
-        .contact-box {
-        padding: 1rem;
-        display: grid;
-        grid-auto-flow: row;
-        align-content: center;
-        align-items: start;
-        justify-content: center;
-        height: 100%;
-        width: auto;
-      }
-
-      .header__link {   
-        width: 80vw;        
-      }  
-
         .portfolio-filters {
           padding: 1rem 2rem;
-          grid-template-rows: repeat(auto-fit, minmax(10vw, 1fr));
-           grid-template-columns:1fr;
+          grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+          grid-template-rows: 1fr;
           grid-gap: 1rem;
-          justify-items : center;
         }
-
-        .portfolio-filters button {   
-        width: 80vw;        
-      }  
 
         .portfolio-grid {
           grid-auto-flow: row;
@@ -495,14 +394,6 @@
           grid-template-rows: repeat(auto-fit, minmax(25vh, 1fr));
           grid-gap: 2rem;
         }
-
-        .item__node {
-        max-width: none;
-      }
-      .item__web {
-         max-width: none;
-      }
-
       }
     </style>
   </head>
@@ -516,34 +407,34 @@
         </div>
         <div class="contact-wrap">
           <div class="contact-box">
-            <a class="header__link" href="https://github.com/andrewtomanek"
+            <a class="item__link" href="https://github.com/andrewtomanek"
               >Github</a
             >
-            <a class="header__link" href="mailto:andrewtomanek@gmail.com"
+            <a class="item__link" href="mailto:andrewtomanek@gmail.com"
               >andrewtomanek@gmail.com</a
             >
             <a
-              class="header__link"
+              class="item__link"
               href="https://docs.google.com/document/d/1xuZoE-WJuamUSPfxWy7h4u8BWWeckr0Xbfr2KbKaGgw/edit?usp=sharing"
               >Životopis</a
             >
             <a
-              class="header__link"
+              class="item__link"
               href="https://docs.google.com/document/d/1aXMdApvRHjaX7XXvU1D74f6AgsT2o2mK61eFZQAQAEU/edit?usp=sharing"
               >Resume</a
             >
-            <a class="header__link" href="https://codepen.io/andrewTomanek/"
-              >codepen.io</a
+            <a class="item__link" href="https://codepen.io/andrewTomanek/"
+              >codepen.io/andrewTomanek</a
             >
           </div>
         </div>
         <div class="portfolio-filters">
           <button class="button__react" id="item__react item__container">
-            React</button
+            react</button
           ><button class="button__vue" id="item__vue item__container">
-            Vue</button
+            vue</button
           ><button class="button__node" id="item__node item__container">
-            Node</button
+            node</button
           ><button class="button__web" id="item__web item__container">
             HTML
           </button>
@@ -558,7 +449,7 @@
                   <a
                     class="item__link"
                     href="https://wonderful-hermann-61e9bd.netlify.com"
-                    >Web</a
+                    >Demo</a
                   >
                   <a
                     class="item__link"
@@ -566,7 +457,7 @@
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal1">
-                    Detail
+                    Details1
                   </button>
                 </div>
                 <div class="item__back">
@@ -585,7 +476,7 @@
                   <a
                     class="item__link"
                     href="https://zdrava-strava.netlify.com/"
-                    >Web</a
+                    >Demo</a
                   >
                   <a
                     class="item__link"
@@ -593,7 +484,7 @@
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal2">
-                    Detail
+                    Details1
                   </button>
                 </div>
                 <div class="item__back">
@@ -610,7 +501,7 @@
                 <div class="item__controls">
                   <h3 class="item__title">Internetový obchod</h3>
                   <a class="item__link" href="https://bottle-shop.netlify.com/"
-                    >Web</a
+                    >Demo</a
                   >
                   <a
                     class="item__link"
@@ -618,7 +509,7 @@
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal3">
-                    Detail
+                    Details1
                   </button>
                 </div>
                 <div class="item__back">
@@ -637,7 +528,7 @@
                 <div class="item__controls">
                   <h3 class="item__title">E-shop Node.js</h3>
                   <a class="item__link" href="https://czech-shop.herokuapp.com"
-                    >Web</a
+                    >Demo</a
                   >
                   <a
                     class="item__link"
@@ -645,7 +536,7 @@
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal4">
-                    Detail
+                    Details1
                   </button>
                 </div>
                 <div class="item__back">
@@ -662,7 +553,7 @@
                 <div class="item__controls">
                   <h3 class="item__title">Vinařství Tománkovi</h3>
                   <a class="item__link" href="https://www.vinarstvitomankovi.cz"
-                    >Web</a
+                    >Demo</a
                   >
                   <a
                     class="item__link"
@@ -670,7 +561,7 @@
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal5">
-                    Detail
+                    Details1
                   </button>
                 </div>
                 <div class="item__back">
@@ -689,7 +580,7 @@
                   <a
                     class="item__link"
                     href="https://node-ghost-chat.herokuapp.com"
-                    >Web</a
+                    >Demo</a
                   >
                   <a
                     class="item__link"
@@ -697,7 +588,7 @@
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal6">
-                    Detail
+                    Details1
                   </button>
                 </div>
                 <div class="item__back">
@@ -718,7 +609,7 @@
                   <a
                     class="item__link"
                     href="https://wall-street-game-bnembk986.now.sh"
-                    >Web</a
+                    >Demo</a
                   >
                   <a
                     class="item__link"
@@ -726,7 +617,7 @@
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal7">
-                    Detail
+                    Details1
                   </button>
                 </div>
                 <div class="item__back">
@@ -745,7 +636,7 @@
                   <a
                     class="item__link"
                     href="https://news-client.andrewtomanek.now.sh/"
-                    >Web</a
+                    >Demo</a
                   >
                   <a
                     class="item__link"
@@ -753,7 +644,7 @@
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal8">
-                    Detail
+                    Details1
                   </button>
                 </div>
                 <div class="item__back">
@@ -772,7 +663,7 @@
                   <a
                     class="item__link"
                     href="https://czech-chat-glkbn6a3d.now.sh/"
-                    >Web</a
+                    >Demo</a
                   >
                   <a
                     class="item__link"
@@ -780,7 +671,7 @@
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal9">
-                    Detail
+                    Details1
                   </button>
                 </div>
                 <div class="item__back">
@@ -804,13 +695,13 @@
                 <h3 class="detail__title">Moravská vinařství</h3>
                 <div class="detail__controls">
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://wonderful-hermann-61e9bd.netlify.com"
-                    >Web</a
+                    >Demo</a
                   >
                   <a class="close__button">×</a>
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://github.com/andrewtomanek/morava_winerys"
                     >Github</a
                   >
@@ -847,13 +738,13 @@
                 <h3 class="detail__title">Zdravá strava</h3>
                 <div class="detail__controls">
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://zdrava-strava.netlify.com/"
-                    >Web</a
+                    >Demo</a
                   >
                   <a class="close__button">×</a>
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://github.com/andrewtomanek/zdrava_strava"
                     >Github</a
                   >
@@ -889,12 +780,12 @@
               <h3 class="detail__title">Internetový obchod</h3>
               <div class="detail__box">
                 <div class="detail__controls">
-                  <a class="detail__link" href="https://bottle-shop.netlify.com/"
-                    >Web</a
+                  <a class="item__link" href="https://bottle-shop.netlify.com/"
+                    >Demo</a
                   >
                   <a class="close__button">×</a>
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://github.com/andrewtomanek/wine_bottle_shop"
                     >Github</a
                   >
@@ -930,12 +821,12 @@
               <h3 class="detail__title">E-shop Node.js</h3>
               <div class="detail__box">
                 <div class="detail__controls">
-                  <a class="detail__link" href="https://czech-shop.herokuapp.com"
-                    >Web</a
+                  <a class="item__link" href="https://czech-shop.herokuapp.com"
+                    >Demo</a
                   >
                   <a class="close__button">×</a>
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://github.com/andrewtomanek/node-shop"
                     >Github</a
                   >
@@ -971,12 +862,12 @@
               <h3 class="detail__title">Vinařství Tománkovi</h3>
               <div class="detail__box">
                 <div class="detail__controls">
-                  <a class="detail__link" href="https://www.vinarstvitomankovi.cz"
-                    >Web</a
+                  <a class="item__link" href="https://www.vinarstvitomankovi.cz"
+                    >Demo</a
                   >
                   <a class="close__button">×</a>
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://github.com/andrewtomanek/vinarstvi_tomankovi_2019"
                     >Github</a
                   >
@@ -1013,13 +904,13 @@
               <div class="detail__box">
                 <div class="detail__controls">
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://node-ghost-chat.herokuapp.com"
-                    >Web</a
+                    >Demo</a
                   >
                   <a class="close__button">×</a>
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://github.com/andrewtomanek/ghost-chat"
                     >Github</a
                   >
@@ -1056,13 +947,13 @@
               <div class="detail__box">
                 <div class="detail__controls">
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://wall-street-game-bnembk986.now.sh"
-                    >Web</a
+                    >Demo</a
                   >
                   <a class="close__button">×</a>
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://github.com/andrewtomanek/wall-street-game"
                     >Github</a
                   >
@@ -1099,13 +990,13 @@
               <div class="detail__box">
                 <div class="detail__controls">
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://news-client.andrewtomanek.now.sh/"
-                    >Web</a
+                    >Demo</a
                   >
                   <a class="close__button">×</a>
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://github.com/andrewtomanek/News-client"
                     >Github</a
                   >
@@ -1142,13 +1033,13 @@
               <div class="detail__box">
                 <div class="detail__controls">
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://czech-chat-glkbn6a3d.now.sh/"
-                    >Web</a
+                    >Demo</a
                   >
                   <a class="close__button">×</a>
                   <a
-                    class="detail__link"
+                    class="item__link"
                     href="https://github.com/andrewtomanek/Czech-chat"
                     >Github</a
                   >

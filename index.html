@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">  
+    <meta name="description" content="Portfolio frontend a backend javascript projektů"/>
     <title>Document</title>
     <style>
       :root {
@@ -17,6 +21,28 @@
         margin: 0;
         padding: 0;
       }
+
+      a {
+        font-family: 'Concert One', cursive;
+      }
+      
+      button {
+        font-family: 'Concert One', cursive;
+      }
+      
+         h3 {
+        font-family: 'Concert One', cursive;
+      }
+      
+            h5 {
+        font-family: 'Concert One', cursive;
+      }
+
+      p {
+        font-family: 'Montserrat', sans-serif;      }
+      
+         li {
+          font-family: 'Montserrat', sans-serif;      }
 
       .site-wrap {
         display: grid;
@@ -84,7 +110,7 @@
         margin: 0;
       }
 
-       .portfolio-grid {
+      .portfolio-grid {
         display: grid;
         margin: 0;
         grid-auto-flow: row;
@@ -133,10 +159,10 @@
         transition: all 300ms;
       }
 
-      .header__link:hover {       
+      .header__link:hover {
         color: white;
         border: solid 0.2rem black;
-          }
+      }
 
       .portfolio-filters button {
         margin: 0;
@@ -150,13 +176,13 @@
         cursor: pointer;
         width: 100%;
         transition: all 300ms;
-      }      
-      
-      .portfolio-filters button:hover {       
+      }
+
+      .portfolio-filters button:hover {
         color: white;
         border: solid 0.2rem black;
-          }
-   
+      }
+
       .button__react {
         background-color: var(--react);
       }
@@ -269,7 +295,7 @@
         background-color: var(--green);
         border: solid 0.2rem white;
         font-size: 1rem;
-        font-weight: 700;
+        font-weight: 400;
         padding: 0.2rem;
         margin: 0.2rem;
         text-decoration: none;
@@ -277,17 +303,17 @@
         transition: all 300ms;
       }
 
-      .item__link:hover {       
+      .item__link:hover {
         color: white;
         border: solid 0.2rem black;
-          }
+      }
 
       .item__button {
         color: white;
         background-color: var(--green);
         border: solid 0.2rem white;
         font-size: 1rem;
-        font-weight: 700;
+        font-weight: 400;
         padding: 0.2rem;
         margin: 0.2rem;
         text-decoration: none;
@@ -295,10 +321,10 @@
         transition: all 300ms;
       }
 
-      .item__button:hover {       
+      .item__button:hover {
         color: white;
         border: solid 0.2rem black;
-          }
+      }
 
       .item__back {
         grid-area: 1/1/1/1;
@@ -311,6 +337,7 @@
       .item__img {
         height: 30vh;
         width: 100%;
+        height: 100%;
         z-index: 4;
       }
 
@@ -333,6 +360,7 @@
         margin: 0; /* 15% from the top and centered */
         padding: 0;
         border: 1px solid #888;
+        max-width: 80vw;
       }
 
       .detail__box {
@@ -340,15 +368,39 @@
         grid-auto-flow: row;
         align-items: center;
         justify-content: center;
+        justify-items: center;
+        background-color: hsla(153, 87%, 90%, 1);
+        padding: 0.5rem;
       }
 
-      
+      .detail__content {
+        display: grid;
+        grid-auto-flow: row;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+      }
+
+      .detail__pic {
+        overflow: hidden;
+        max-width: 50vw;
+      }
+
       .detail__title {
         color: var(--web);
+        background-color: hsla(153, 87%, 90%, 1);
         padding: 0.2rem;
         text-align: center;
         font-size: 1.5rem;
         font-weight: 800;
+      }
+
+      .detail_tech {
+        color: var(--web);
+        padding: 0.2rem;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
       }
 
       .detail__controls {
@@ -359,19 +411,53 @@
         justify-content: center;
       }
 
-      .detail__link {
-        color: white;
-        background-color: var(--green);
-        font-size: 1rem;
-        font-weight: 700;
-        padding: 0.2rem;
-        margin: 0.2rem;
-        text-decoration: none;
-        cursor: pointer;
+      .detail__list {
+        list-style-type: circle;
       }
 
-      .detail__link { 
-               background-color: var(--node);
+      .detail__item {
+        color: black;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.2rem 0.3rem;
+        text-align: left;
+      }
+
+      .detail__text {
+        color: black;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.2rem 0.3rem;
+        text-align: left;
+        width: 70%;
+      }
+
+      .detail__anchors {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0.2rem;
+      }
+
+      .content__link {
+        background-color: var(--vue);
+        color: white;
+        font-size: 1rem;
+        font-weight: 900;
+        padding: 0.2rem 0.3rem;
+        margin: 0.2rem 0.3rem;
+        text-decoration: none;
+        text-align: left;
+      }
+
+      .content__link :hover {
+        color: white;
+        border: solid 0.2rem black;
+      }
+
+      .detail__link {
+        background-color: var(--node);
         color: white;
         border: solid 0.2rem white;
         font-size: 1.1rem;
@@ -383,10 +469,10 @@
         transition: all 300ms;
       }
 
-      .detail__link:hover {       
+      .detail__link:hover {
         color: white;
         border: solid 0.2rem black;
-          }
+      }
 
       .close__button {
         color: white;
@@ -419,12 +505,14 @@
         font-size: 3rem;
         font-weight: 900;
         color: var(--node);
-        background: linear-gradient(to right, var(--node) 43%, var(--web) 43%) bottom,
+        background: linear-gradient(to right, var(--node) 43%, var(--web) 43%)
+            bottom,
           linear-gradient(to right, var(--web) 43%, var(--node) 43%) top;
         background-repeat: no-repeat;
         background-size: 100% 2vmin;
         padding: 1rem 0;
         white-space: nowrap;
+        font-family: 'Concert One', cursive;
       }
       .inverted_color:before {
         content: attr(data-text);
@@ -434,44 +522,38 @@
         top: 1rem;
         width: 43%;
         color: var(--web);
+        font-family: 'Concert One', cursive;
       }
 
-      @media all and (max-width: 1280px) {
+         @media all and (max-width: 1280px) {
       }
       @media all and (max-width: 980px) {
-      }
-
-      @media all and (max-width: 736px) {
-      }
-
-      @media all and (max-width: 480px) {
-
         .contact-box {
-        padding: 1rem;
-        display: grid;
-        grid-auto-flow: row;
-        align-content: center;
-        align-items: start;
-        justify-content: center;
-        height: 100%;
-        width: auto;
-      }
+          padding: 1rem;
+          display: grid;
+          grid-auto-flow: row;
+          align-content: center;
+          align-items: start;
+          justify-content: center;
+          height: 100%;
+          width: auto;
+        }
 
-      .header__link {   
-        width: 80vw;        
-      }  
+        .header__link {
+          width: 80vw;
+        }
 
         .portfolio-filters {
           padding: 1rem 2rem;
           grid-template-rows: repeat(auto-fit, minmax(10vw, 1fr));
-           grid-template-columns:1fr;
+          grid-template-columns: 1fr;
           grid-gap: 1rem;
-          justify-items : center;
+          justify-items: center;
         }
 
-        .portfolio-filters button {   
-        width: 80vw;        
-      }  
+        .portfolio-filters button {
+          width: 80vw;
+        }
 
         .portfolio-grid {
           grid-auto-flow: row;
@@ -497,12 +579,17 @@
         }
 
         .item__node {
-        max-width: none;
-      }
-      .item__web {
-         max-width: none;
+          max-width: none;
+        }
+        .item__web {
+          max-width: none;
+        }
       }
 
+      @media all and (max-width: 736px) {
+      }
+
+      @media all and (max-width: 480px) {
       }
     </style>
   </head>
@@ -801,7 +888,6 @@
           <div class="modal__content">
             <div class="contact__form">
               <div class="detail__box">
-                <h3 class="detail__title">Moravská vinařství</h3>
                 <div class="detail__controls">
                   <a
                     class="detail__link"
@@ -815,6 +901,7 @@
                     >Github</a
                   >
                 </div>
+                <h3 class="detail__title">Moravská vinařství</h3>
                 <div class="detail__pic">
                   <img
                     class="item__img"
@@ -824,17 +911,52 @@
                 </div>
                 <div class="detail__content">
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Seznam vinařství jihovýchodní moravy.<br />
+                    Možnost zvolit požadovanou obec nebo město.<br />
+                    Zobrazení všech provozoven na mapě.<br />
+                    Možnost vyhledávat podle jména nebo adresy.
                   </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Single page app pohání knihovna React.js.
+                    </li>
+                    <li class="detail__item">
+                      Animace přes react-transition-group.
+                    </li>
+                    <li class="detail__item">
+                      Database and Authorization s využitím Google Firebase
+                    </li>
+                  </ul>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://reactjs.org"
+                      >React.js</a
+                    >
+                    <a class="content__link" href="https://redux.js.org"
+                      >Redux.js</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://reacttraining.com/react-router"
+                      >React-Router</a
+                    >
+                    <a class="content__link" href="https://redux-saga.js.org"
+                      >Redux-saga</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/reactjs/react-transition-group"
+                      >react-transition-group</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/axios/axios"
+                      >Axios</a
+                    >
+                    <a class="content__link" href="https://firebase.google.com"
+                      >Firebase</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -844,7 +966,6 @@
           <div class="modal__content">
             <div class="contact__form">
               <div class="detail__box">
-                <h3 class="detail__title">Zdravá strava</h3>
                 <div class="detail__controls">
                   <a
                     class="detail__link"
@@ -858,6 +979,7 @@
                     >Github</a
                   >
                 </div>
+                <h3 class="detail__title">Zdravá strava</h3>
                 <div class="detail__pic">
                   <img
                     class="item__img"
@@ -867,17 +989,63 @@
                 </div>
                 <div class="detail__content">
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Kalkulátor výživových hodnot vložených potravin.<br />
+                    Po nastavení denního limitu se vypočítá v košíku suma
+                    přidaných položek. Výsledek se zobrazí graficky a v
+                    procentech. <br />Po autorizaci je možné osobní data ukládat
+                    a stahovat z databáze Firebase.
                   </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Single page app pohání knihovna React.js.
+                    </li>
+                    <li class="detail__item">State managment na bázi Redux.</li>
+                    <li class="detail__item">Asynchronus IO Redux-saga.</li>
+                    <li class="detail__item">
+                      Animace přes react-transition-group.
+                    </li>
+                    <li class="detail__item">
+                      CRUD operations s pomocí Axios.
+                    </li>
+                    <li class="detail__item">
+                      Database and Authorization s využitím Google Firebase
+                    </li>
+                  </ul>
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Pro Input/Output funkčnost je potřeba vytvořit ůčet u Google
+                    Firebase a uložit API keys v .env souboru ve formátu: const
+                    API_KEY = 'ENTER YOUR API'
                   </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://reactjs.org"
+                      >React.js</a
+                    >
+                    <a class="content__link" href="https://redux.js.org"
+                      >Redux.js</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://reacttraining.com/react-router"
+                      >React-Router</a
+                    >
+                    <a class="content__link" href="https://redux-saga.js.org"
+                      >Redux-saga</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/reactjs/react-transition-group"
+                      >react-transition-group</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/axios/axios"
+                      >Axios</a
+                    >
+                    <a class="content__link" href="https://firebase.google.com"
+                      >Firebase</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -886,10 +1054,11 @@
         <div class="modal__box" id="modal3">
           <div class="modal__content">
             <div class="contact__form">
-              <h3 class="detail__title">Internetový obchod</h3>
               <div class="detail__box">
                 <div class="detail__controls">
-                  <a class="detail__link" href="https://bottle-shop.netlify.com/"
+                  <a
+                    class="detail__link"
+                    href="https://bottle-shop.netlify.com/"
                     >Web</a
                   >
                   <a class="close__button">×</a>
@@ -899,6 +1068,7 @@
                     >Github</a
                   >
                 </div>
+                <h3 class="detail__title">Internetový obchod</h3>
                 <div class="detail__pic">
                   <img
                     class="item__img"
@@ -908,17 +1078,65 @@
                 </div>
                 <div class="detail__content">
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Internetový obchod s lahvovaným vínem.<br />
+                    Po naplnění přepravního boxu pro 6 lahví se odblokuje přiání
+                    do košíku.<br />
+                    Vybrané zboží a vyplněný formulář vytvoří objednávku, která
+                    je dostupná v archivu.
                   </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Single page app pohání knihovna React.js.
+                    </li>
+                    <li class="detail__item">State managment na bázi Redux.</li>
+                    <li class="detail__item">Asynchronus IO Redux-saga.</li>
+                    <li class="detail__item">
+                      Animace přes react-transition-group.
+                    </li>
+                    <li class="detail__item">
+                      CRUD operations s pomocí Axios.
+                    </li>
+                    <li class="detail__item">
+                      Database and Authorization s využitím Google Firebase
+                    </li>
+                  </ul>
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Komponentní Css styles jsou v souborech s koncovkou
+                    .module.css.<br />
+                    Pro Input/Output funkčnost je potřeba vytvořit ůčet u Google
+                    Firebase a uložit API keys v .env souboru ve formátu:<br />
+                    const API_KEY = 'ENTER YOUR API'.
                   </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://reactjs.org"
+                      >React.js</a
+                    >
+                    <a class="content__link" href="https://redux.js.org"
+                      >Redux.js</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://reacttraining.com/react-router"
+                      >React-Router</a
+                    >
+                    <a class="content__link" href="https://redux-saga.js.org"
+                      >Redux-saga</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/reactjs/react-transition-group"
+                      >react-transition-group</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/axios/axios"
+                      >Axios</a
+                    >
+                    <a class="content__link" href="https://firebase.google.com"
+                      >Firebase</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -927,10 +1145,11 @@
         <div class="modal__box" id="modal4">
           <div class="modal__content">
             <div class="contact__form">
-              <h3 class="detail__title">E-shop Node.js</h3>
               <div class="detail__box">
                 <div class="detail__controls">
-                  <a class="detail__link" href="https://czech-shop.herokuapp.com"
+                  <a
+                    class="detail__link"
+                    href="https://czech-shop.herokuapp.com"
                     >Web</a
                   >
                   <a class="close__button">×</a>
@@ -940,6 +1159,7 @@
                     >Github</a
                   >
                 </div>
+                <h3 class="detail__title">E-shop Node.js</h3>
                 <div class="detail__pic">
                   <img
                     class="item__img"
@@ -949,17 +1169,48 @@
                 </div>
                 <div class="detail__content">
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Internetový obchod s vínem. <br />Řazení položek podle ceny
+                    nebo abecedy vzestupně nebo sestupně.<br />
+                    Modifikace položek v košíku zadaním do input field nebo
+                    tlačitek +/-.<br />
+                    Dokončené objednávky vygenerují z archivu PDF. Admin
+                    rozhraní pro tvorbu nových položek a edit stávajících.
+                    Přidaní akčního zboží na homepage. Nastavení počtu skladem.
                   </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Server rendered HTML
+                    </li>
+                    <li class="detail__item">
+                      View engine EJS.
+                    </li>
+                    <li class="detail__item">
+                      Databáze MongoDb cloud.
+                    </li>
+                    <li class="detail__item">
+                      Knihovna Mongoose pro snadnou obsluhu ModgoDb.
+                    </li>
+                    <li class="detail__item">
+                      Nodemailer pro reset hesla přes e-mail.
+                    </li>
+                  </ul>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://nodejs.org">Node</a>
+                    <a class="content__link" href="https://expressjs.com"
+                      >Express</a
+                    >
+                    <a class="content__link" href="https://ejs.co">EJS</a>
+                    <a class="content__link" href="https://cloud.mongodb.com"
+                      >MongoDb cloud</a
+                    >
+                    <a class="content__link" href="https://mongoosejs.com"
+                      >Mongoose</a
+                    >
+                    <a class="content__link" href="https://nodemailer.com"
+                      >Nodemailer</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -968,10 +1219,11 @@
         <div class="modal__box" id="modal5">
           <div class="modal__content">
             <div class="contact__form">
-              <h3 class="detail__title">Vinařství Tománkovi</h3>
               <div class="detail__box">
                 <div class="detail__controls">
-                  <a class="detail__link" href="https://www.vinarstvitomankovi.cz"
+                  <a
+                    class="detail__link"
+                    href="https://www.vinarstvitomankovi.cz"
                     >Web</a
                   >
                   <a class="close__button">×</a>
@@ -981,6 +1233,7 @@
                     >Github</a
                   >
                 </div>
+                <h3 class="detail__title">Vinařství Tománkovi</h3>
                 <div class="detail__pic">
                   <img
                     class="item__img"
@@ -990,17 +1243,30 @@
                 </div>
                 <div class="detail__content">
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Firemní web vinařství Tománkovi.
                   </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Informace o šlechtěných odrůdách.
+                    </li>
+                    <li class="detail__item">
+                      Proces výroby a prodeje vína.
+                    </li>
+                    <li class="detail__item">
+                      Seznam zveřejněných článků.
+                    </li>
+                    <li class="detail__item">
+                      Historie firmy.
+                    </li>
+                  </ul>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a
+                      class="content__link"
+                      href="https://developers.google.com/maps/documentation/"
+                      >Google Maps Platform</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -1009,7 +1275,6 @@
         <div class="modal__box" id="modal6">
           <div class="modal__content">
             <div class="contact__form">
-              <h3 class="detail__title">Ghost chat</h3>
               <div class="detail__box">
                 <div class="detail__controls">
                   <a
@@ -1024,6 +1289,7 @@
                     >Github</a
                   >
                 </div>
+                <h3 class="detail__title">Ghost chat</h3>
                 <div class="detail__pic">
                   <img
                     class="item__img"
@@ -1033,17 +1299,30 @@
                 </div>
                 <div class="detail__content">
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Chat aplikace bez ukládání dat. <br />Sdílení polohy pomocí
+                    Browser Location API. Smazaní dat po refresh page.
                   </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Framework Express.js
+                    </li>
+                    <li class="detail__item">
+                      Server rendered HTML
+                    </li>
+                    <li class="detail__item">
+                      Socket.io pro komunikaci v reálném čase
+                    </li>
+                  </ul>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://nodejs.org">Node</a>
+                    <a class="content__link" href="https://expressjs.com"
+                      >Express</a
+                    >
+                    <a class="content__link" href="https://socket.io"
+                      >Socket.io</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -1052,7 +1331,6 @@
         <div class="modal__box" id="modal7">
           <div class="modal__content">
             <div class="contact__form">
-              <h3 class="detail__title">Wall Street Game</h3>
               <div class="detail__box">
                 <div class="detail__controls">
                   <a
@@ -1067,6 +1345,7 @@
                     >Github</a
                   >
                 </div>
+                <h3 class="detail__title">Wall Street Game</h3>
                 <div class="detail__pic">
                   <img
                     class="item__img"
@@ -1076,17 +1355,53 @@
                 </div>
                 <div class="detail__content">
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Uživatelské rozhraní pro nákup a prodej akcií a měn.<br />
+                    Zjištění aktualního kurzu ze zvolených měn. <br />Po
+                    authorizaci jsou data ukládána a nahrávána do databáze.
                   </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Single page app pohání framework Vue.js.
+                    </li>
+                    <li class="detail__item">
+                      Knihovna Vuelidate pro kontrolu vstupů
+                    </li>
+                    <li class="detail__item">
+                      Animace přes Vue transition.
+                    </li>
+                    <li class="detail__item">
+                      Finanční data od Alphavantage API
+                    </li>
+                    <li class="detail__item">
+                      Database and Authorization s využitím Google Firebase
+                    </li>
+                  </ul>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://vuejs.org">Vue.js</a>
+                    <a class="content__link" href="https://vuex.vuejs.org/"
+                      >Vuex</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/vuelidate/vuelidate"
+                      >Vuelidate</a
+                    >
+                    <a class="content__link" href="https://router.vuejs.org/"
+                      >Vue Router</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/axios/axios"
+                      >Axios</a
+                    >
+                    <a class="content__link" href="https://firebase.google.com"
+                      >Firebase</a
+                    >
+                    <a class="content__link" href="https://www.alphavantage.co"
+                      >Alphavantage</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -1095,7 +1410,6 @@
         <div class="modal__box" id="modal8">
           <div class="modal__content">
             <div class="contact__form">
-              <h3 class="detail__title">News client</h3>
               <div class="detail__box">
                 <div class="detail__controls">
                   <a
@@ -1110,6 +1424,7 @@
                     >Github</a
                   >
                 </div>
+                <h3 class="detail__title">News client</h3>
                 <div class="detail__pic">
                   <img
                     class="item__img"
@@ -1119,17 +1434,49 @@
                 </div>
                 <div class="detail__content">
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Zdroj aktuálních informací s využitím API.<br />
+                    Možnost vybrat požadovaný zdroj a vygenerovat grid zpráv.
+                    Vyhledávaní zpráv podle zadaného výrazu.<br />
+                    Aktuální počasí a předpověd podle města nebo podle Browser
+                    Location API. <br />Aktuální žebříček GIPHY.API.
                   </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Single page app pohání framework Vue.js.
+                    </li>
+                    <li class="detail__item">
+                      Animace přes Vue transition.
+                    </li>
+                    <li class="detail__item">
+                      Knihovna Vuelidate pro kontrolu vstupů
+                    </li>
+                    <li class="detail__item">Newsapi.org API zdroj zpráv</li>
+                    <li class="detail__item">Openweathermap API pro počasí</li>
+                    <li class="detail__item">Giphy.com API soubory .gif</li>
+                  </ul>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://vuejs.org">Vue.js</a>
+                    <a
+                      class="content__link"
+                      href="https://github.com/vuelidate/vuelidate"
+                      >Vuelidate</a
+                    >
+                    <a class="content__link" href="https://router.vuejs.org/"
+                      >Vue Router</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://api.openweathermap.org"
+                      >Openweathermap</a
+                    >
+                    <a class="content__link" href="https://newsapi.org"
+                      >Newsapi.org</a
+                    >
+                    <a class="content__link" href="https://giphy.com"
+                      >Giphy.com</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -1138,7 +1485,6 @@
         <div class="modal__box" id="modal9">
           <div class="modal__content">
             <div class="contact__form">
-              <h3 class="detail__title">Czech chat</h3>
               <div class="detail__box">
                 <div class="detail__controls">
                   <a
@@ -1153,6 +1499,7 @@
                     >Github</a
                   >
                 </div>
+                <h3 class="detail__title">Czech chat</h3>
                 <div class="detail__pic">
                   <img
                     class="item__img"
@@ -1162,17 +1509,52 @@
                 </div>
                 <div class="detail__content">
                   <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
+                    Jednoduchá chatovací applikace s databází firebase.
+                    <br />Možnost vygenerování nahodného českeho jména a náhodné
+                    lokace z knihy Game of Thrones. <br />Kliknutím na uživatele
+                    zvolíme jeho místnost. <br />Postranní panel zobrazí ve
+                    kterých místnostech se nachazí ostatní uživatelé.
                   </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
-                  <p class="detail__text">
-                    React JS components, Forms, Events, Keys, Router, plus
-                    Redux, Animations
-                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Single page app pohání framework Vue.js.
+                    </li>
+                    <li class="detail__item">
+                      Animace přes Vue transition.
+                    </li>
+                    <li class="detail__item">
+                      Knihovna Vuelidate pro kontrolu vstupů
+                    </li>
+                    <li class="detail__item">
+                      Knihovna Moment.js pro zobrazení času
+                    </li>
+                    <li class="detail__item">
+                      Database s využitím Google Firebase
+                    </li>
+                  </ul>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://vuejs.org">Vue.js</a>
+                    <a
+                      class="content__link"
+                      href="https://github.com/vuelidate/vuelidate"
+                      >Vuelidate</a
+                    >
+                    <a class="content__link" href="https://router.vuejs.org/"
+                      >Vue Router</a
+                    >
+                    <a class="content__link" href="https://momentjs.com"
+                      >Moment.js</a
+                    >
+                    <a class="content__link" href="https://firebase.google.com"
+                      >Firebase</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://www.npmjs.com/package/vue-chat-scroll"
+                      >vue-chat-scroll</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>

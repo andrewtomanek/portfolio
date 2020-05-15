@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">  
-    <meta name="description" content="Portfolio frontend a backend javascript projektů"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Portfolio frontend a backend javascript projektů"
+    />
     <title>Ondřej Tománek</title>
     <style>
       :root {
@@ -23,26 +32,28 @@
       }
 
       a {
-        font-family: 'Concert One', cursive;
+        font-family: "Concert One", cursive;
       }
-      
+
       button {
-        font-family: 'Concert One', cursive;
+        font-family: "Concert One", cursive;
       }
-      
-         h3 {
-        font-family: 'Concert One', cursive;
+
+      h3 {
+        font-family: "Concert One", cursive;
       }
-      
-            h5 {
-        font-family: 'Concert One', cursive;
+
+      h5 {
+        font-family: "Concert One", cursive;
       }
 
       p {
-        font-family: 'Montserrat', sans-serif;      }
-      
-         li {
-          font-family: 'Montserrat', sans-serif;      }
+        font-family: "Montserrat", sans-serif;
+      }
+
+      li {
+        font-family: "Montserrat", sans-serif;
+      }
 
       .site-wrap {
         display: grid;
@@ -512,7 +523,7 @@
         background-size: 100% 2vmin;
         padding: 1rem 0;
         white-space: nowrap;
-        font-family: 'Concert One', cursive;
+        font-family: "Concert One", cursive;
       }
       .inverted_color:before {
         content: attr(data-text);
@@ -522,10 +533,10 @@
         top: 1rem;
         width: 43%;
         color: var(--web);
-        font-family: 'Concert One', cursive;
+        font-family: "Concert One", cursive;
       }
 
-         @media all and (max-width: 1280px) {
+      @media all and (max-width: 1280px) {
       }
       @media all and (max-width: 980px) {
         .contact-box {
@@ -642,9 +653,7 @@
               <div class="item__box">
                 <div class="item__controls">
                   <h3 class="item__title">Moravská vinařství</h3>
-                  <a
-                    class="item__link"
-                    href="https://vinari-moravy.netlify.com"
+                  <a class="item__link" href="https://vinari-moravy.netlify.com"
                     >Web</a
                   >
                   <a
@@ -717,6 +726,83 @@
                 </div>
               </div>
             </section>
+            <section class="item__react item__container">
+              <div class="item__box">
+                <div class="item__controls">
+                  <h3 class="item__title">Github API client</h3>
+                  <a class="item__link" href="https://client-github.netlify.app"
+                    >Web</a
+                  >
+                  <a
+                    class="item__link"
+                    href="https://github.com/andrewtomanek/github-client"
+                    >Github</a
+                  >
+                  <button class="item__button" data-modal="modal4">
+                    Detail
+                  </button>
+                </div>
+                <div class="item__back">
+                  <img
+                    class="item__img"
+                    src="./images/cont/react-black.png"
+                    data-src="./images/gifs/cellar.gif"
+                  />
+                </div>
+              </div>
+            </section>
+            <section class="item__react item__container">
+              <div class="item__box">
+                <div class="item__controls">
+                  <h3 class="item__title">Notes rest client</h3>
+                  <a class="item__link" href="https://notes-api.netlify.app"
+                    >Web</a
+                  >
+                  <a
+                    class="item__link"
+                    href="https://github.com/andrewtomanek/typescript-rest-api"
+                    >Github</a
+                  >
+                  <button class="item__button" data-modal="modal5">
+                    Detail
+                  </button>
+                </div>
+                <div class="item__back">
+                  <img
+                    class="item__img"
+                    src="./images/cont/react-black.png"
+                    data-src="./images/gifs/strava.gif"
+                  />
+                </div>
+              </div>
+            </section>
+            <section class="item__react item__container">
+              <div class="item__box">
+                <div class="item__controls">
+                  <h3 class="item__title">Questionnaire game</h3>
+                  <a
+                    class="item__link"
+                    href="https://typescript-quiz.netlify.app"
+                    >Web</a
+                  >
+                  <a
+                    class="item__link"
+                    href="https://github.com/andrewtomanek/quiz-redux"
+                    >Github</a
+                  >
+                  <button class="item__button" data-modal="modal6">
+                    Detail
+                  </button>
+                </div>
+                <div class="item__back">
+                  <img
+                    class="item__img"
+                    src="./images/cont/react-black.png"
+                    data-src="./images/gifs/bottle.gif"
+                  />
+                </div>
+              </div>
+            </section>
           </div>
           <div class="node-grid">
             <section class="item__node item__container">
@@ -731,7 +817,7 @@
                     href="https://github.com/andrewtomanek/node-shop"
                     >Github</a
                   >
-                  <button class="item__button" data-modal="modal4">
+                  <button class="item__button" data-modal="modal7">
                     Detail
                   </button>
                 </div>
@@ -756,7 +842,7 @@
                     href="https://github.com/andrewtomanek/vinarstvi_tomankovi_2019"
                     >Github</a
                   >
-                  <button class="item__button" data-modal="modal5">
+                  <button class="item__button" data-modal="modal8">
                     Detail
                   </button>
                 </div>
@@ -783,7 +869,7 @@
                     href="https://github.com/andrewtomanek/ghost-chat"
                     >Github</a
                   >
-                  <button class="item__button" data-modal="modal6">
+                  <button class="item__button" data-modal="modal9">
                     Detail
                   </button>
                 </div>
@@ -812,7 +898,7 @@
                     href="https://github.com/andrewtomanek/wall-street-game"
                     >Github</a
                   >
-                  <button class="item__button" data-modal="modal7">
+                  <button class="item__button" data-modal="modal10">
                     Detail
                   </button>
                 </div>
@@ -839,7 +925,7 @@
                     href="https://github.com/andrewtomanek/News-client"
                     >Github</a
                   >
-                  <button class="item__button" data-modal="modal8">
+                  <button class="item__button" data-modal="modal11">
                     Detail
                   </button>
                 </div>
@@ -866,7 +952,7 @@
                     href="https://github.com/andrewtomanek/Czech-chat"
                     >Github</a
                   >
-                  <button class="item__button" data-modal="modal9">
+                  <button class="item__button" data-modal="modal12">
                     Detail
                   </button>
                 </div>
@@ -1149,6 +1235,286 @@
                 <div class="detail__controls">
                   <a
                     class="detail__link"
+                    href="https://client-github.netlify.app"
+                    >Web</a
+                  >
+                  <a class="close__button">×</a>
+                  <a
+                    class="detail__link"
+                    href="https://github.com/andrewtomanek/github-client"
+                    >Github</a
+                  >
+                </div>
+                <h3 class="detail__title">Github API client</h3>
+                <div class="detail__pic">
+                  <img
+                    class="item__img"
+                    src="./images/cont/react-black.png"
+                    data-src="./images/gifs/cellar.gif"
+                  />
+                </div>
+                <div class="detail__content">
+                  <p class="detail__text">
+                    Search users from github-API.<br />
+                    Display user details.<br />
+                    Display user repos details.<br />
+                    Filter repos by name.<br />
+                    Sort repos by stargazers_count.<br />
+                    Open repo detail.<br />
+                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Single page app based on React.js.
+                    </li>
+                    <li class="detail__item">
+                      State managment by Redux Rematch
+                    </li>
+                    <li class="detail__item">
+                      Form handleling with Formik component.
+                    </li>
+                    <li class="detail__item">
+                      Validation schema from YUP library
+                    </li>
+                    <li class="detail__item">
+                      CRUD operations with Axios.
+                    </li>
+                  </ul>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://reactjs.org"
+                      >React.js</a
+                    >
+                    <a class="content__link" href="https://redux.js.org"
+                      >Redux.js</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/rematch/rematch"
+                      >Rematch</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://reacttraining.com/react-router"
+                      >React-Router</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://styled-components.com"
+                      >styled-components</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/axios/axios"
+                      >Axios</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/jaredpalmer/formik"
+                      >Formik</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/jquense/yup"
+                      >YUP</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__box" id="modal5">
+          <div class="modal__content">
+            <div class="contact__form">
+              <div class="detail__box">
+                <div class="detail__controls">
+                  <a class="detail__link" href="https://notes-api.netlify.app"
+                    >Web</a
+                  >
+                  <a class="close__button">×</a>
+                  <a
+                    class="detail__link"
+                    href="https://github.com/andrewtomanek/typescript-rest-api"
+                    >Github</a
+                  >
+                </div>
+                <h3 class="detail__title">Notes rest client</h3>
+                <div class="detail__pic">
+                  <img
+                    class="item__img"
+                    src="./images/cont/react-black.png"
+                    data-src="./images/gifs/strava.gif"
+                  />
+                </div>
+                <div class="detail__content">
+                  <p class="detail__text">
+                    Fetch notes from jsonplaceholder API.<br />
+                    Create new notes and upload them to server.<br />
+                    Edit existing note.<br />
+                    Display detail of picked note.<br />
+                    Select preferred language.<br />
+                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Single page app based on React.js.
+                    </li>
+                    <li class="detail__item">
+                      State managment by Redux.
+                    </li>
+                    <li class="detail__item">
+                      Testing coverage handled with Jest and Enzyme.
+                    </li>
+                    <li class="detail__item">
+                      Type checking by TypeScript.
+                    </li>
+                    <li class="detail__item">
+                      Styling elments from MATERIAL-UI.
+                    </li>
+                  </ul>
+                  <p class="detail__text">
+                    Run: yarn test<br /> or watch changes: yarn watch
+                  </p>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://reactjs.org"
+                      >React.js</a
+                    >
+                    <a class="content__link" href="https://redux.js.org"
+                      >Redux.js</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://github.com/supasate/connected-react-router"
+                      >Connected-React-Router</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://reacttraining.com/react-router"
+                      >React-Router</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://styled-components.com"
+                      >styled-components</a
+                    >
+                    <a class="content__link" href="https://jestjs.io/en"
+                      >Jest</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://enzymejs.github.io/enzyme"
+                      >Enzyme</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://www.typescriptlang.org"
+                      >TypeScript</a
+                    >
+                    <a class="content__link" href="https://material-ui.com/"
+                      >MATERIAL-UI</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__box" id="modal6">
+          <div class="modal__content">
+            <div class="contact__form">
+              <div class="detail__box">
+                <div class="detail__controls">
+                  <a
+                    class="detail__link"
+                    href="https://typescript-quiz.netlify.app"
+                    >Web</a
+                  >
+                  <a class="close__button">×</a>
+                  <a
+                    class="detail__link"
+                    href="https://github.com/andrewtomanek/quiz-redux"
+                    >Github</a
+                  >
+                </div>
+                <h3 class="detail__title">Questionnaire game</h3>
+                <div class="detail__pic">
+                  <img
+                    class="item__img"
+                    src="./images/cont/react-black.png"
+                    data-src="./images/gifs/bottle.gif"
+                  />
+                </div>
+                <div class="detail__content">
+                  <p class="detail__text">
+                    Write answer to the input field.<br />
+                    Submit your answer.<br />
+                    Reset or delete your answer.<br />
+                    Display completed sentence.<br />
+                  </p>
+                  <ul class="detail__list">
+                    <li class="detail__item">
+                      Single page app based on React.js.
+                    </li>
+                    <li class="detail__item">
+                      State managment by Redux.
+                    </li>
+                    <li class="detail__item">
+                      Testing coverage handled with Jest and Enzyme.
+                    </li>
+                    <li class="detail__item">
+                      Type checking by TypeScript.
+                    </li>
+                    <li class="detail__item">
+                      Styling elments with styled-components.
+                    </li>
+                  </ul>
+                  <p class="detail__text">
+                    Run: yarn test<br /> or watch changes: yarn watch
+                  </p>
+                  <h5 class="detail_tech">Dependencies:</h5>
+                  <div class="detail__anchors">
+                    <a class="content__link" href="https://reactjs.org"
+                      >React.js</a
+                    >
+                    <a class="content__link" href="https://redux.js.org"
+                      >Redux.js</a
+                    >
+                                <a
+                      class="content__link"
+                      href="https://reacttraining.com/react-router"
+                      >React-Router</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://styled-components.com"
+                      >styled-components</a
+                    >
+                    <a class="content__link" href="https://jestjs.io/en"
+                      >Jest</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://enzymejs.github.io/enzyme"
+                      >Enzyme</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://www.typescriptlang.org"
+                      >TypeScript</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__box" id="modal7">
+          <div class="modal__content">
+            <div class="contact__form">
+              <div class="detail__box">
+                <div class="detail__controls">
+                  <a
+                    class="detail__link"
                     href="https://czech-shop.herokuapp.com"
                     >Web</a
                   >
@@ -1216,7 +1582,7 @@
             </div>
           </div>
         </div>
-        <div class="modal__box" id="modal5">
+        <div class="modal__box" id="modal8">
           <div class="modal__content">
             <div class="contact__form">
               <div class="detail__box">
@@ -1272,7 +1638,7 @@
             </div>
           </div>
         </div>
-        <div class="modal__box" id="modal6">
+        <div class="modal__box" id="modal9">
           <div class="modal__content">
             <div class="contact__form">
               <div class="detail__box">
@@ -1328,7 +1694,7 @@
             </div>
           </div>
         </div>
-        <div class="modal__box" id="modal7">
+        <div class="modal__box" id="modal10">
           <div class="modal__content">
             <div class="contact__form">
               <div class="detail__box">
@@ -1407,7 +1773,7 @@
             </div>
           </div>
         </div>
-        <div class="modal__box" id="modal8">
+        <div class="modal__box" id="modal11">
           <div class="modal__content">
             <div class="contact__form">
               <div class="detail__box">
@@ -1482,7 +1848,7 @@
             </div>
           </div>
         </div>
-        <div class="modal__box" id="modal9">
+        <div class="modal__box" id="modal12">
           <div class="modal__content">
             <div class="contact__form">
               <div class="detail__box">
@@ -1570,7 +1936,7 @@
       const portfolioButtons = Array.from(
         document.querySelectorAll(".portfolio-filters button")
       );
-      portfolioButtons.forEach(function(elem) {
+      portfolioButtons.forEach(function (elem) {
         elem.addEventListener("click", filterPortfolioItems);
       });
 
@@ -1592,8 +1958,8 @@
         }
       }
       var modalBtns = [...document.querySelectorAll(".item__button")];
-      modalBtns.forEach(function(btn) {
-        btn.onclick = function() {
+      modalBtns.forEach(function (btn) {
+        btn.onclick = function () {
           var modal = btn.getAttribute("data-modal");
           document.getElementById(modal).style.display = "grid";
           document.querySelector(".modal-wrap").style.zIndex = "8";
@@ -1601,15 +1967,15 @@
       });
 
       var closeBtns = [...document.querySelectorAll(".close__button")];
-      closeBtns.forEach(function(btn) {
-        btn.onclick = function() {
+      closeBtns.forEach(function (btn) {
+        btn.onclick = function () {
           var modal = btn.closest(".modal__box");
           modal.style.display = "none";
           document.querySelector(".modal-wrap").style.zIndex = "1";
         };
       });
 
-      window.onclick = function(event) {
+      window.onclick = function (event) {
         if (event.target.className === "modal__box") {
           event.target.style.display = "none";
           document.querySelector(".modal-wrap").style.zIndex = "1";
@@ -1618,7 +1984,7 @@
 
       window.addEventListener(
         "load",
-        function() {
+        function () {
           var allimages = document.getElementsByTagName("img");
           for (var i = 0; i < allimages.length; i++) {
             if (allimages[i].getAttribute("data-src")) {

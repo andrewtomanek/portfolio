@@ -18,7 +18,7 @@
     <title>Ondřej Tománek</title>
     <style>
       :root {
-        font-size: calc(1vw + 1vh + 0.5vmin);
+        font-size: calc(1vw + 1vh + 0.4vmin);
         --react: hsla(192, 95%, 68%, 1);
         --vue: hsla(153, 47%, 49%, 1);
         --green: hsla(143, 85%, 50%, 1);
@@ -32,19 +32,19 @@
       }
 
       a {
-        font-family: "Concert One", cursive;
+        font-family: "Concert One", verdana, cursive;
       }
 
       button {
-        font-family: "Concert One", cursive;
+        font-family: "Concert One", verdana, cursive;
       }
 
       h3 {
-        font-family: "Concert One", cursive;
+        font-family: "Concert One", verdana, cursive;
       }
 
       h5 {
-        font-family: "Concert One", cursive;
+        font-family: "Concert One", verdana, cursive;
       }
 
       p {
@@ -162,7 +162,7 @@
         color: white;
         border: solid 0.2rem white;
         font-size: 1.1rem;
-        font-weight: 900;
+        font-weight: 800;
         padding: 0.2rem 0.3rem;
         text-decoration: none;
         text-align: center;
@@ -182,7 +182,7 @@
         text-align: center;
         color: white;
         border: solid 0.2rem white;
-        font-weight: 900;
+        font-weight: 800;
         font-size: 1.1rem;
         cursor: pointer;
         width: 100%;
@@ -455,7 +455,7 @@
         background-color: var(--vue);
         color: white;
         font-size: 1rem;
-        font-weight: 900;
+        font-weight: 800;
         padding: 0.2rem 0.3rem;
         margin: 0.2rem 0.3rem;
         text-decoration: none;
@@ -472,7 +472,7 @@
         color: white;
         border: solid 0.2rem white;
         font-size: 1.1rem;
-        font-weight: 900;
+        font-weight: 800;
         padding: 0.2rem 0.3rem;
         text-decoration: none;
         text-align: center;
@@ -491,7 +491,7 @@
         padding: 0.2rem 0.55rem;
         border-radius: 2rem;
         font-size: 1.2rem;
-        font-weight: 900;
+        font-weight: 800;
         text-align: center;
         border: none;
         text-decoration: none;
@@ -512,9 +512,8 @@
       .inverted_color {
         position: relative;
         display: inline-block;
-        font-family: georgia;
         font-size: 3rem;
-        font-weight: 900;
+        font-weight: 800;
         color: var(--node);
         background: linear-gradient(to right, var(--node) 43%, var(--web) 43%)
             bottom,
@@ -523,7 +522,7 @@
         background-size: 100% 2vmin;
         padding: 1rem 0;
         white-space: nowrap;
-        font-family: "Concert One", cursive;
+        font-family: verdana, cursive;
       }
       .inverted_color:before {
         content: attr(data-text);
@@ -533,7 +532,7 @@
         top: 1rem;
         width: 43%;
         color: var(--web);
-        font-family: "Concert One", cursive;
+        font-family: verdana, cursive;
       }
 
       @media all and (max-width: 1280px) {
@@ -685,7 +684,7 @@
                   >
                   <a
                     class="item__link"
-                    href="https://github.com/andrewtomanek/zdrava_strava"
+                    href="https://github.com/andrewtomanek/healthy-nutrition"
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal2">
@@ -1061,7 +1060,7 @@
                   <a class="close__button">×</a>
                   <a
                     class="detail__link"
-                    href="https://github.com/andrewtomanek/zdrava_strava"
+                    href="https://github.com/andrewtomanek/healthy-nutrition"
                     >Github</a
                   >
                 </div>
@@ -1095,6 +1094,15 @@
                     </li>
                     <li class="detail__item">
                       Database and Authorization s využitím Google Firebase
+                    </li>
+                    <li class="detail__item">
+                      Testing coverage handled with Jest and Enzyme.
+                    </li>
+                    <li class="detail__item">
+                      Type checking by TypeScript.
+                    </li>
+                    <li class="detail__item">
+                      Styling elments with styled-components.
                     </li>
                   </ul>
                   <p class="detail__text">
@@ -1130,6 +1138,24 @@
                     >
                     <a class="content__link" href="https://firebase.google.com"
                       >Firebase</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://styled-components.com"
+                      >styled-components</a
+                    >
+                    <a class="content__link" href="https://jestjs.io/en"
+                      >Jest</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://enzymejs.github.io/enzyme"
+                      >Enzyme</a
+                    >
+                    <a
+                      class="content__link"
+                      href="https://www.typescriptlang.org"
+                      >TypeScript</a
                     >
                   </div>
                 </div>
@@ -1372,7 +1398,8 @@
                     </li>
                   </ul>
                   <p class="detail__text">
-                    Run: yarn test<br /> or watch changes: yarn watch
+                    Run: yarn test<br />
+                    or watch changes: yarn watch
                   </p>
                   <h5 class="detail_tech">Dependencies:</h5>
                   <div class="detail__anchors">
@@ -1469,7 +1496,8 @@
                     </li>
                   </ul>
                   <p class="detail__text">
-                    Run: yarn test<br /> or watch changes: yarn watch
+                    Run: yarn test<br />
+                    or watch changes: yarn watch
                   </p>
                   <h5 class="detail_tech">Dependencies:</h5>
                   <div class="detail__anchors">
@@ -1479,7 +1507,7 @@
                     <a class="content__link" href="https://redux.js.org"
                       >Redux.js</a
                     >
-                                <a
+                    <a
                       class="content__link"
                       href="https://reacttraining.com/react-router"
                       >React-Router</a

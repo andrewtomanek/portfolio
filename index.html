@@ -84,7 +84,7 @@
       }
 
       .portfolio-wrap {
-        background-color: var(--web);
+        background-color: var(--web, orange);
         display: grid;
         grid-auto-flow: row;
         grid-gap: 0.5rem;
@@ -134,7 +134,7 @@
         grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
         grid-template-rows: 1fr;
         grid-gap: 2rem;
-        background-color: var(--react);
+        background-color: var(--react, lightblue);
       }
 
       .vue-grid {
@@ -143,7 +143,7 @@
         grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
         grid-template-rows: 1fr;
         grid-gap: 2rem;
-        background-color: var(--vue);
+        background-color: var(--vue, lightgreen);
       }
 
       .node-grid {
@@ -154,11 +154,11 @@
         grid-gap: 2rem;
         justify-items: center;
         align-items: center;
-        background-color: var(--node);
+        background-color: var(--node, darkgreen);
       }
 
       .header__link {
-        background-color: var(--node);
+        background-color: var(--node, darkgreen);
         color: white;
         border: solid 0.2rem white;
         font-size: 1.1rem;
@@ -195,19 +195,19 @@
       }
 
       .button__react {
-        background-color: var(--react);
+        background-color: var(--react, lightblue);
       }
 
       .button__vue {
-        background-color: var(--vue);
+        background-color: var(--vue, lightgreen);
       }
 
       .button__node {
-        background-color: var(--node);
+        background-color: var(--node, darkgreen);
       }
 
       .button__web {
-        background-color: var(--web);
+        background-color: var(--web, orange);
       }
 
       .button__showAll {
@@ -231,29 +231,29 @@
       .item__react {
         opacity: 1;
         visibility: visible;
-        border: 0.5rem solid var(--react);
-        background-color: var(--react);
+        border: 0.5rem solid var(--react, lightblue);
+        background-color: var(--react, lightblue);
       }
 
       .item__vue {
         opacity: 1;
         visibility: visible;
-        border: 0.5rem solid var(--vue);
-        background-color: var(--vue);
+        border: 0.5rem solid var(--vue, lightgreen);
+        background-color: var(--vue, lightgreen);
       }
 
       .item__node {
         opacity: 1;
         visibility: visible;
-        border: 0.5rem solid var(--node);
-        background-color: var(--node);
+        border: 0.5rem solid var(--node, darkgreen);
+        background-color: var(--node, darkgreen);
         max-width: 30vw;
       }
       .item__web {
         opacity: 1;
         visibility: visible;
-        border: 0.5rem solid var(--web);
-        background-color: var(--web);
+        border: 0.5rem solid var(--web, orange);
+        background-color: var(--web, orange);
         max-width: 30vw;
       }
 
@@ -294,7 +294,7 @@
 
       .item__title {
         color: white;
-        background-color: var(--web);
+        background-color: var(--web, orange);
         padding: 0.2rem;
         text-align: center;
         font-size: 1rem;
@@ -303,7 +303,7 @@
 
       .item__link {
         color: white;
-        background-color: var(--green);
+        background-color: var(--green, green);
         border: solid 0.2rem white;
         font-size: 1rem;
         font-weight: 400;
@@ -321,7 +321,7 @@
 
       .item__button {
         color: white;
-        background-color: var(--green);
+        background-color: var(--green, green);
         border: solid 0.2rem white;
         font-size: 1rem;
         font-weight: 400;
@@ -398,7 +398,7 @@
       }
 
       .detail__title {
-        color: var(--web);
+        color: var(--web, orange);
         background-color: hsla(153, 87%, 90%, 1);
         padding: 0.2rem;
         text-align: center;
@@ -407,7 +407,7 @@
       }
 
       .detail_tech {
-        color: var(--web);
+        color: var(--web, orange);
         padding: 0.2rem;
         text-align: center;
         font-size: 1.1rem;
@@ -452,7 +452,7 @@
       }
 
       .content__link {
-        background-color: var(--vue);
+        background-color: var(--vue, lightgreen);
         color: white;
         font-size: 1rem;
         font-weight: 800;
@@ -468,7 +468,7 @@
       }
 
       .detail__link {
-        background-color: var(--node);
+        background-color: var(--node, darkgreen);
         color: white;
         border: solid 0.2rem white;
         font-size: 1.1rem;
@@ -487,7 +487,7 @@
 
       .close__button {
         color: white;
-        background-color: var(--web);
+        background-color: var(--web, orange);
         padding: 0.2rem 0.55rem;
         border-radius: 2rem;
         font-size: 1.2rem;
@@ -505,7 +505,7 @@
 
       .inverted_text {
         text-align: center;
-        background-color: var(--react);
+        background-color: var(--react, lightblue);
         padding: 1rem;
       }
 
@@ -514,10 +514,10 @@
         display: inline-block;
         font-size: 3rem;
         font-weight: 800;
-        color: var(--node);
-        background: linear-gradient(to right, var(--node) 43%, var(--web) 43%)
+        color: var(--node, darkgreen);
+        background: linear-gradient(to right, var(--node, darkgreen) 43%, var(--web, orange) 43%)
             bottom,
-          linear-gradient(to right, var(--web) 43%, var(--node) 43%) top;
+          linear-gradient(to right, var(--web, orange) 43%, var(--node, darkgreen) 43%) top;
         background-repeat: no-repeat;
         background-size: 100% 2vmin;
         padding: 1rem 0;
@@ -531,7 +531,7 @@
         left: 0;
         top: 1rem;
         width: 43%;
-        color: var(--web);
+        color: var(--web, orange);
         font-family: verdana, cursive;
       }
 

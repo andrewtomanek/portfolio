@@ -18,7 +18,7 @@
     <title>Ondřej Tománek</title>
     <style>
       :root {
-        font-size: calc(1vw + 1vh + 0.4vmin);
+        font-size: calc(1vw + 1vh + 0.3vmin);
         --react: hsla(192, 95%, 68%, 1);
         --vue: hsla(153, 47%, 49%, 1);
         --green: hsla(143, 85%, 50%, 1);
@@ -55,7 +55,7 @@
         font-family: "Montserrat", sans-serif;
       }
 
-      .site-wrap {
+      .site_wrap {
         display: grid;
         grid: 1fr/1fr;
         align-content: center;
@@ -63,34 +63,51 @@
         justify-content: center;
         height: 100%;
         width: 100%;
+        background-color: hsla(13, 97%, 97%, 1);
+        background: linear-gradient(
+          180deg,
+          hsla(13, 95%, 95%, 1) 25%,
+          hsla(139, 95%, 95%, 1) 50%,
+          hsla(192, 95%, 95%, 1) 85%
+        );
       }
 
-      .contact-wrap {
+      .buttons_wrap {
         display: grid;
-        height: 100%;
-        width: 100%;
+        padding: 1rem;
+        background-color: hsla(13, 70%, 79%, 1);
+        background: linear-gradient(
+          0deg,
+          hsla(13, 95%, 95%, 1) 15%,
+          hsla(139, 95%, 95%, 1) 50%,
+          hsla(192, 95%, 95%, 1) 85%
+        );
       }
 
       .contact-box {
-        padding: 0.5rem;
         display: grid;
         grid-auto-flow: column;
         align-content: center;
-        align-items: start;
-        justify-content: center;
+        justify-content: space-between;
         grid-gap: 0.5rem;
-        height: 100%;
-        width: 100%;
+        padding: 1rem 2rem;
       }
 
-      .portfolio-wrap {
-        background-color: var(--web, orange);
+      .portfolio_filters {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 1rem;
+        text-align: center;
+        padding: 1rem 2rem;
+        margin: 0;
+      }
+
+      .portfolio_wrap {
         display: grid;
         grid-auto-flow: row;
-        grid-gap: 0.5rem;
         grid-area: 1/1/1/1;
-        height: 100%;
-        width: 100%;
         align-items: center;
         justify-content: stretch;
         z-index: 2;
@@ -110,17 +127,6 @@
         z-index: 1;
       }
 
-      .portfolio-filters {
-        display: grid;
-        margin: 0;
-        padding: 0.5rem 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
-        grid-template-rows: 1fr;
-        grid-gap: 1rem;
-        text-align: center;
-        margin: 0;
-      }
-
       .portfolio-grid {
         display: grid;
         margin: 0;
@@ -128,42 +134,37 @@
         grid-gap: 0rem;
       }
 
-      .react-grid {
+      .react_grid {
         display: grid;
-        padding: 1rem 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+        padding: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
         grid-template-rows: 1fr;
-        grid-gap: 2rem;
-        background-color: var(--react, lightblue);
+        grid-gap: 4rem;
       }
 
       .vue-grid {
         display: grid;
-        padding: 1rem 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+        padding: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
         grid-template-rows: 1fr;
-        grid-gap: 2rem;
-        background-color: var(--vue, lightgreen);
+        grid-gap: 4rem;
       }
 
       .node-grid {
         display: grid;
-        padding: 1rem 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+        padding: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
         grid-template-rows: 1fr;
-        grid-gap: 2rem;
-        justify-items: center;
-        align-items: center;
-        background-color: var(--node, darkgreen);
+        grid-gap: 4rem;
       }
 
       .header__link {
-        background-color: var(--node, darkgreen);
+        background-color: hsla(139, 45%, 45%, 1);
         color: white;
-        border: solid 0.2rem white;
-        font-size: 1.1rem;
-        font-weight: 800;
-        padding: 0.2rem 0.3rem;
+        border: solid 0.1rem white;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 0.5rem 0.7rem;
         text-decoration: none;
         text-align: center;
         cursor: pointer;
@@ -172,26 +173,25 @@
 
       .header__link:hover {
         color: white;
-        border: solid 0.2rem black;
+        border: solid 0.1rem black;
       }
 
-      .portfolio-filters button {
+      .portfolio_filters button {
         margin: 0;
-        padding: 0.2rem 0.3rem;
+        padding: 0.5rem 0.7rem;
         text-decoration: none;
         text-align: center;
         color: white;
-        border: solid 0.2rem white;
-        font-weight: 800;
-        font-size: 1.1rem;
+        border: solid 0.1rem white;
+        font-weight: 500;
+        font-size: 1.2rem;
         cursor: pointer;
-        width: 100%;
         transition: all 300ms;
       }
 
-      .portfolio-filters button:hover {
+      .portfolio_filters button:hover {
         color: white;
-        border: solid 0.2rem black;
+        border: solid 0.1rem black;
       }
 
       .button__react {
@@ -221,38 +221,38 @@
       }
 
       .item__container:hover {
-        border: 0.5rem solid transparent;
+        border: 0.2rem solid transparent;
       }
 
       .item__container:hover .item__box {
-        transform: scale(1);
+        transform: scale(1.1);
       }
 
       .item__react {
         opacity: 1;
         visibility: visible;
-        border: 0.5rem solid var(--react, lightblue);
+        border: 0.2rem solid var(--react, lightblue);
         background-color: var(--react, lightblue);
       }
 
       .item__vue {
         opacity: 1;
         visibility: visible;
-        border: 0.5rem solid var(--vue, lightgreen);
+        border: 0.2rem solid var(--vue, lightgreen);
         background-color: var(--vue, lightgreen);
       }
 
       .item__node {
         opacity: 1;
         visibility: visible;
-        border: 0.5rem solid var(--node, darkgreen);
+        border: 0.2rem solid var(--node, darkgreen);
         background-color: var(--node, darkgreen);
         max-width: 30vw;
       }
       .item__web {
         opacity: 1;
         visibility: visible;
-        border: 0.5rem solid var(--web, orange);
+        border: 0.2rem solid var(--web, orange);
         background-color: var(--web, orange);
         max-width: 30vw;
       }
@@ -272,7 +272,7 @@
         width: 100%;
         overflow: hidden;
         transition: all 300ms;
-        transform: scale(0.9);
+        transform: scale(0.925);
       }
 
       .item__controls {
@@ -307,11 +307,13 @@
         border: solid 0.2rem white;
         font-size: 1rem;
         font-weight: 400;
+        text-align: center;
+        text-decoration: none;
         padding: 0.2rem;
         margin: 0.2rem;
-        text-decoration: none;
         cursor: pointer;
         transition: all 300ms;
+        width: 30%;
       }
 
       .item__link:hover {
@@ -325,10 +327,11 @@
         border: solid 0.2rem white;
         font-size: 1rem;
         font-weight: 400;
-        padding: 0.2rem;
-        margin: 0.2rem;
         text-decoration: none;
         cursor: pointer;
+        padding: 0.2rem;
+        margin: 0.2rem;
+        width: 30%;
         transition: all 300ms;
       }
 
@@ -378,10 +381,9 @@
         display: grid;
         grid-auto-flow: row;
         align-items: center;
-        justify-content: center;
         justify-items: center;
         background-color: hsla(153, 87%, 90%, 1);
-        padding: 0.5rem;
+        padding: 3rem;
       }
 
       .detail__content {
@@ -390,6 +392,7 @@
         align-items: center;
         justify-content: center;
         justify-items: center;
+        max-width: 50vw;
       }
 
       .detail__pic {
@@ -419,18 +422,19 @@
         grid-gap: 1rem 3rem;
         grid-auto-flow: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        width: 100%;
       }
 
       .detail__list {
-        list-style-type: circle;
+        list-style-type: upper-roman;
       }
 
       .detail__item {
         color: black;
         font-size: 1rem;
         font-weight: 500;
-        padding: 0.2rem 0.3rem;
+        padding: 0.2rem 0rem;
         text-align: left;
       }
 
@@ -438,17 +442,18 @@
         color: black;
         font-size: 1rem;
         font-weight: 500;
-        padding: 0.2rem 0.3rem;
+        line-height: 1.5rem;
         text-align: left;
-        width: 70%;
+        padding: 2rem 0rem;
+        max-width: 50vw;
       }
 
       .detail__anchors {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
-        padding: 0.2rem;
+        padding: 0.5rem;
       }
 
       .content__link {
@@ -457,7 +462,7 @@
         font-size: 1rem;
         font-weight: 800;
         padding: 0.2rem 0.3rem;
-        margin: 0.2rem 0.3rem;
+        margin: 0.7rem 0.3rem;
         text-decoration: none;
         text-align: left;
       }
@@ -489,7 +494,6 @@
         color: white;
         background-color: var(--web, orange);
         padding: 0.2rem 0.55rem;
-        border-radius: 2rem;
         font-size: 1.2rem;
         font-weight: 800;
         text-align: center;
@@ -503,75 +507,42 @@
         transform: scale(1.1);
       }
 
-      .inverted_text {
+      header {
         text-align: center;
-        background-color: var(--react, lightblue);
-        padding: 0.5rem;
+        padding: 2rem 0rem 1rem;
+        background: radial-gradient(
+          hsla(13, 95%, 95%, 1) 40%,
+          hsla(192, 95%, 95%, 1) 70%
+        );
       }
 
-      .inverted_color {
-        position: relative;
+      h1 {
         display: inline-block;
         font-size: 2rem;
         font-weight: 900;
-        color: var(--node, darkgreen);
-        background: linear-gradient(
-              to right,
-              var(--node, darkgreen) 43%,
-              var(--web, orange) 43%
-            )
-            bottom,
-          linear-gradient(
-              to right,
-              var(--web, orange) 43%,
-              var(--node, darkgreen) 43%
-            )
-            top;
-        background-repeat: no-repeat;
-        background-size: 100% 2vmin;
-        padding: 1rem 0;
-        white-space: nowrap;
-        font-family: verdana, cursive;
-      }
-      .inverted_color:before {
-        content: attr(data-text);
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        top: 1rem;
-        width: 43%;
-        color: var(--web, orange);
-        font-family: verdana, cursive;
+        background-color: var(--web, orange);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        font-family: Tahoma, verdana, cursive;
       }
 
       @media all and (max-width: 1280px) {
       }
       @media all and (max-width: 980px) {
         .contact-box {
-          padding: 1rem;
-          display: grid;
           grid-auto-flow: row;
-          align-content: center;
-          align-items: start;
-          justify-content: center;
-          height: 100%;
-          width: auto;
+          grid-gap: 1rem;
         }
 
         .header__link {
           width: 80vw;
         }
 
-        .portfolio-filters {
-          padding: 1rem 2rem;
-          grid-template-rows: repeat(auto-fit, minmax(10vw, 1fr));
-          grid-template-columns: 1fr;
+        .portfolio_filters {
+          grid-auto-flow: row;
+          justify-content: stretch;
           grid-gap: 1rem;
-          justify-items: center;
-        }
-
-        .portfolio-filters button {
-          width: 80vw;
         }
 
         .portfolio-grid {
@@ -579,22 +550,22 @@
           grid-gap: 0rem;
         }
 
-        .react-grid {
+        .react_grid {
           grid-template-columns: 1fr;
           grid-template-rows: repeat(auto-fit, minmax(25vh, 1fr));
-          grid-gap: 2rem;
+          grid-gap: 4rem;
         }
 
         .vue-grid {
           grid-template-columns: 1fr;
           grid-template-rows: repeat(auto-fit, minmax(25vh, 1fr));
-          grid-gap: 2rem;
+          grid-gap: 4rem;
         }
 
         .node-grid {
           grid-template-columns: 1fr;
           grid-template-rows: repeat(auto-fit, minmax(25vh, 1fr));
-          grid-gap: 2rem;
+          grid-gap: 4rem;
         }
 
         .item__node {
@@ -613,14 +584,12 @@
     </style>
   </head>
   <body>
-    <div class="site-wrap">
-      <div class="portfolio-wrap">
-        <div class="inverted_text">
-          <span class="inverted_color" data-text="Ondřej Tománek"
-            >Ondřej Tománek</span
-          >
-        </div>
-        <div class="contact-wrap">
+    <div class="site_wrap">
+      <div class="portfolio_wrap">
+        <header>
+          <h1 class="inverted_color">Ondřej Tománek</h1>
+        </header>
+        <div class="buttons_wrap">
           <div class="contact-box">
             <a class="header__link" href="https://github.com/andrewtomanek"
               >Github</a
@@ -642,21 +611,21 @@
               >codepen.io</a
             >
           </div>
-        </div>
-        <div class="portfolio-filters">
-          <button class="button__react" id="item__react item__container">
-            React</button
-          ><button class="button__vue" id="item__vue item__container">
-            Vue</button
-          ><button class="button__node" id="item__node item__container">
-            Node</button
-          ><button class="button__web" id="item__web item__container">
-            HTML
-          </button>
-          <button class="button__showAll" id="showAll">Show All</button>
+          <div class="portfolio_filters">
+            <button class="button__react" id="item__react item__container">
+              React</button
+            ><button class="button__vue" id="item__vue item__container">
+              Vue</button
+            ><button class="button__node" id="item__node item__container">
+              Node</button
+            ><button class="button__web" id="item__web item__container">
+              HTML
+            </button>
+            <button class="button__showAll" id="showAll">Show All</button>
+          </div>
         </div>
         <div class="portfolio-grid">
-          <div class="react-grid">
+          <div class="react_grid">
             <section class="item__react item__container">
               <div class="item__box">
                 <div class="item__controls">
@@ -847,7 +816,7 @@
                   >
                   <a
                     class="item__link"
-                    href="https://github.com/andrewtomanek/vinarstvi_tomankovi_2020"
+                    href="https://github.com/andrewtomanek/vinarstvi_tomankovi_2021"
                     >Github</a
                   >
                   <button class="item__button" data-modal="modal8">
@@ -1614,7 +1583,7 @@
                   <a class="close__button">×</a>
                   <a
                     class="detail__link"
-                    href="https://github.com/andrewtomanek/vinarstvi_tomankovi_2020"
+                    href="https://github.com/andrewtomanek/vinarstvi_tomankovi_2021"
                     >Github</a
                   >
                 </div>
@@ -1935,7 +1904,7 @@
         ".portfolio-grid section"
       );
       const portfolioButtons = Array.from(
-        document.querySelectorAll(".portfolio-filters button")
+        document.querySelectorAll(".portfolio_filters button")
       );
       portfolioButtons.forEach(function (elem) {
         elem.addEventListener("click", filterPortfolioItems);
